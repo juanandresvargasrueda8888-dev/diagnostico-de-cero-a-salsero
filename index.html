@@ -1,0 +1,1051 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>¿Por qué te quedas sentado cuando suena la salsa?</title>
+<meta name="description" content="5 preguntas sencillas, pensadas para quien nunca ha bailado. Descubre qué te frena y cuál es tu primer paso real.">
+<meta property="og:title" content="¿Por qué te quedas sentado cuando suena la salsa?">
+<meta property="og:description" content="5 preguntas. 2 minutos. No necesitas saber bailar para responderlas.">
+<meta name="theme-color" content="#123B3A">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600&display=swap">
+<style>
+/* Colores y tipografía de la marca De Cero a Salsero */
+:root {
+  --brand-primary: #123B3A;
+  --brand-accent: #B94735;
+  --brand-background: #F5EFE6;
+  --brand-text: #171717;
+  --brand-muted: #8A847C;
+  --brand-white: #FFFFFF;
+
+  --font-display: "Anton", "Impact", "Arial Narrow", sans-serif;
+  --font-body: "Poppins", -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  /* Derivados (no cambiar salvo que quieras otro contraste) */
+  --bg: var(--brand-background);
+  --surface: var(--brand-white);
+  --ink: var(--brand-text);
+  --muted: #6F6A63;              /* --brand-muted oscurecido para texto legible */
+  --line: #E4DCCF;
+  --primary: var(--brand-primary);
+  --on-primary: #F5EFE6;
+  --accent: var(--brand-accent);
+  --accent-soft: #F3E3DC;
+  --gutter: 20px;
+  --col: 560px;
+  --radius: 14px;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0D1F1E; --surface: #142B2A; --ink: #F5EFE6; --muted: #A9B3AF; --line: #24403E;
+    --primary: #F5EFE6; --on-primary: #123B3A; --accent: #E0735F; --accent-soft: #2A2420; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0D1F1E; --surface: #142B2A; --ink: #F5EFE6; --muted: #A9B3AF; --line: #24403E;
+  --primary: #F5EFE6; --on-primary: #123B3A; --accent: #E0735F; --accent-soft: #2A2420; color-scheme: dark;
+}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font-family:var(--font-body); font-size:16px; line-height:1.6;
+  -webkit-font-smoothing:antialiased; overflow-x:hidden;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+.wrap{max-width:calc(var(--col) + var(--gutter)*2); margin:0 auto; padding:16px var(--gutter) 56px; min-height:100svh; display:flex; flex-direction:column}
+button{font:inherit; color:inherit}
+:focus-visible{outline:2px solid var(--accent); outline-offset:3px; border-radius:8px}
+
+/* Cabecera */
+.top{display:flex; justify-content:space-between; align-items:center; gap:12px; padding:6px 0 24px}
+.brand{font-family:var(--font-display); font-size:18px; letter-spacing:.04em; text-transform:uppercase; color:var(--primary)}
+.brand b{font-weight:400; color:var(--accent)}
+.tag{font-size:11px; font-weight:500; letter-spacing:.14em; text-transform:uppercase; color:var(--muted)}
+
+.screen{flex:1; display:flex; flex-direction:column}
+.screen[hidden]{display:none!important}
+.fade{animation:fade .45s ease both}
+@keyframes fade{from{opacity:.001; transform:translateY(8px)}to{opacity:1; transform:none}}
+
+.eyebrow{font-size:12px; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--accent); margin:0 0 16px}
+.label{font-size:11px; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); margin:0 0 12px}
+h1,h2,h3{margin:0; text-wrap:balance}
+.display{font-family:var(--font-display); font-weight:400; text-transform:uppercase; letter-spacing:.005em; color:var(--primary)}
+.display em{font-style:normal; color:var(--accent)}
+
+/* Portada */
+h1.display{font-size:clamp(40px, 12vw, 70px); line-height:.98}
+.lead{color:var(--muted); font-size:16px; margin:18px 0 0; max-width:36ch}
+.learn{list-style:none; margin:26px 0 0; padding:0; display:grid; gap:12px; border-top:1px solid var(--line); padding-top:20px}
+.learn li{display:grid; grid-template-columns:32px 1fr; gap:8px; align-items:baseline; font-size:15px}
+.learn li i{font-style:normal; font-family:var(--font-display); font-size:16px; color:var(--accent)}
+.meta{font-size:13px; color:var(--muted); margin:14px 0 0; text-align:center}
+
+/* Botones */
+.btn{appearance:none; border:0; cursor:pointer; display:inline-flex; align-items:center; justify-content:center; gap:10px; text-align:center;
+  min-height:56px; padding:0 24px; border-radius:999px; font-weight:600; font-size:16px; line-height:1.25; text-decoration:none; transition:transform .15s ease, opacity .15s ease, background .15s ease}
+.btn:active{transform:scale(.98)}
+.btn-primary{background:var(--primary); color:var(--on-primary)}
+.btn-accent{background:var(--brand-accent); color:#fff}
+.btn-ghost{background:transparent; border:1.5px solid var(--line); color:var(--ink)}
+.btn-block{width:100%}
+.btn[disabled]{opacity:.35; cursor:default}
+.cta-row{margin-top:auto; padding-top:28px}
+
+/* Progreso */
+.progress{display:grid; grid-template-columns:repeat(5,1fr); gap:6px; margin-bottom:12px}
+.beat{height:4px; border-radius:2px; background:var(--line); transition:background .3s ease}
+.beat.done{background:var(--primary)}
+.beat.now{background:var(--accent)}
+.qmeta{display:flex; justify-content:space-between; font-size:12px; font-weight:500; letter-spacing:.1em; color:var(--muted); text-transform:uppercase}
+.qmeta b{color:var(--ink); font-weight:600}
+
+/* Pregunta */
+.qnum{font-family:var(--font-display); font-size:56px; line-height:1; color:var(--accent); margin:32px 0 10px}
+.qtext{font-size:clamp(22px, 6.2vw, 28px); font-weight:600; line-height:1.28; letter-spacing:-.01em; margin:0}
+.qhint{color:var(--muted); font-size:14.5px; margin:10px 0 0}
+.opts{display:grid; gap:10px; margin-top:24px}
+.opt{appearance:none; text-align:left; cursor:pointer; width:100%;
+  display:grid; grid-template-columns:22px minmax(0,1fr); gap:14px; align-items:start;
+  background:var(--surface); border:1.5px solid var(--line); border-radius:var(--radius);
+  padding:16px 18px; font-size:15.5px; line-height:1.45; min-height:60px;
+  transition:border-color .15s ease, background .15s ease}
+.opt:hover{border-color:var(--muted)}
+.opt .dot{width:20px; height:20px; border-radius:50%; border:1.5px solid var(--line); margin-top:1px; display:grid; place-items:center; transition:all .15s ease}
+.opt[aria-checked="true"]{border-color:var(--accent); background:var(--accent-soft)}
+.opt[aria-checked="true"] .dot{border-color:var(--accent); background:var(--accent)}
+.opt[aria-checked="true"] .dot::after{content:""; width:7px; height:7px; border-radius:50%; background:#fff}
+.opt-eco{display:block; margin-top:8px; color:var(--accent); font-weight:600; font-size:14px; line-height:1.4}
+.opt-eco:empty{display:none}
+.opt-eco:not(:empty){animation:fade .35s ease both}
+.sr-only{position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap}
+.nav{display:flex; gap:10px; margin-top:auto; padding-top:28px}
+.nav .btn{flex:1; min-height:54px; padding:0 16px}
+.nav .btn-ghost{flex:0 0 auto; min-width:118px}
+
+/* Analizando */
+.thinking{flex:1; display:flex; flex-direction:column; justify-content:center; gap:18px; min-height:50svh}
+.pulse{display:flex; gap:8px}
+.pulse span{width:10px; height:10px; border-radius:50%; background:var(--accent); animation:clave 1.2s infinite ease-in-out}
+.pulse span:nth-child(2){animation-delay:.2s}.pulse span:nth-child(3){animation-delay:.4s}
+@keyframes clave{0%,100%{opacity:.25; transform:scale(.8)}40%{opacity:1; transform:scale(1)}}
+
+/* Resultado */
+.r-stage{font-family:var(--font-display); text-transform:uppercase; font-size:clamp(34px, 10vw, 48px); line-height:1; color:var(--primary)}
+.track{display:grid; grid-template-columns:repeat(4,1fr); gap:6px; margin-top:20px}
+.track span{height:6px; border-radius:3px; background:var(--line)}
+.track span.on{background:var(--primary)}
+.track span.here{background:var(--accent)}
+.track-labels{display:flex; justify-content:space-between; font-size:12px; color:var(--muted); margin-top:8px}
+.stage-text{color:var(--muted); margin:16px 0 0}
+
+.block{border-top:1px solid var(--line); margin-top:40px; padding-top:28px}
+.route{font-family:var(--font-display); text-transform:uppercase; font-size:clamp(36px, 11vw, 54px); line-height:.98; color:var(--accent)}
+.bottleneck{font-size:clamp(20px, 5.6vw, 24px); font-weight:600; line-height:1.3; margin-top:14px}
+.prose{margin:0; max-width:62ch}
+.prose + .prose{margin-top:12px}
+
+.hear{margin:0; font-size:18px; line-height:1.55; font-weight:500}
+
+/* Creencia vs. realidad */
+.myth{display:grid; gap:18px}
+.myth .belief{font-size:19px; font-weight:600; line-height:1.35; color:var(--muted); text-decoration:line-through; text-decoration-color:var(--accent); text-decoration-thickness:2px}
+.myth .truth{margin:0; padding-left:16px; border-left:3px solid var(--accent)}
+
+.moves{list-style:none; margin:0; padding:0; display:grid; gap:22px}
+.moves li{display:grid; grid-template-columns:44px minmax(0,1fr); gap:4px}
+.moves-intro{margin-bottom:22px; font-weight:500}
+.moves .mt{margin:0; font-weight:600; font-size:17px; line-height:1.35}
+.moves .mc{margin:6px 0 0}
+.moves .mp{margin:8px 0 0; font-size:14.5px; color:var(--muted)}
+.moves .mp b{color:var(--ink); font-weight:600}
+.moves .ms{margin:10px 0 0; font-size:14px; color:var(--muted); padding:10px 12px; background:var(--accent-soft); border-radius:10px}
+.moves .ms b{color:var(--accent); font-weight:600}
+.moves .num{font-family:var(--font-display); font-size:24px; line-height:1.15; color:var(--accent)}
+
+/* Camino de A a B */
+.ab{display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:26px}
+.ab div{border:1.5px solid var(--line); border-radius:var(--radius); padding:14px}
+.ab div:last-child{border-color:var(--primary)}
+.ab b{display:block; font-family:var(--font-display); font-weight:400; font-size:22px; line-height:1; color:var(--primary); margin-bottom:8px; text-transform:uppercase}
+.ab div:first-child b{color:var(--accent)}
+.ab span{font-size:14px; line-height:1.45; display:block}
+.path{list-style:none; margin:0; padding:0; display:grid}
+.path li{display:grid; grid-template-columns:20px minmax(0,1fr); gap:14px; padding-bottom:22px; position:relative}
+.path li:not(:last-child)::before{content:""; position:absolute; left:9px; top:20px; bottom:0; width:2px; background:var(--line)}
+.path .pt{width:20px; height:20px; border-radius:50%; border:2px solid var(--line); background:var(--bg); margin-top:2px}
+.path li.here .pt{border-color:var(--accent); background:var(--accent)}
+.path .ph{font-size:12px; font-weight:600; letter-spacing:.12em; text-transform:uppercase; color:var(--muted)}
+.path .ph em{font-style:normal; color:var(--accent); margin-left:6px}
+.path .pn{font-weight:600; margin:2px 0}
+.path .pd{font-size:14.5px; color:var(--muted)}
+.gap{margin:0 0 24px; font-weight:600}
+.note{font-size:15px; margin:4px 0 0; padding:16px; background:var(--accent-soft); border-radius:var(--radius)}
+
+.profile{display:grid; gap:14px; margin:0; padding:0; list-style:none}
+.profile li{display:grid; grid-template-columns:30px minmax(0,1fr); gap:12px; align-items:center}
+.profile .l{font-family:var(--font-display); font-size:24px; line-height:1; color:var(--muted)}
+.profile .n{display:flex; justify-content:space-between; gap:10px; font-size:14px; margin-bottom:6px}
+.profile .n span:last-child{font-size:12px; color:var(--muted); white-space:nowrap}
+.profile .bar{height:6px; border-radius:3px; background:var(--line); overflow:hidden}
+.profile .bar i{display:block; height:100%; background:var(--primary); border-radius:3px; width:0; transition:width .9s cubic-bezier(.2,.7,.2,1)}
+.profile .read{margin:8px 0 0; font-size:14.5px; line-height:1.5}
+.profile li{align-items:start}
+.profile .l{padding-top:2px}
+.profile li.key .l{color:var(--accent)}
+.profile li.key .bar i{background:var(--accent)}
+.profile li.key .n span:first-child{font-weight:600}
+
+/* Siguiente paso */
+.next{background:var(--brand-primary); color:#F5EFE6; border-radius:22px; padding:32px 22px; margin-top:48px}
+.next .label{color:#E89A8B}
+.next h3{font-family:var(--font-display); font-weight:400; text-transform:uppercase; font-size:clamp(30px, 8.6vw, 40px); line-height:1.02}
+.next p{margin:14px 0 0; color:rgba(245,239,230,.86)}
+.doubts-t{font-weight:600; color:#F5EFE6!important; margin-top:22px!important}
+.doubts{list-style:none; margin:12px 0 0; padding:0; display:grid; gap:10px}
+.doubts li{display:grid; grid-template-columns:18px minmax(0,1fr); gap:10px; font-size:15px; color:#F5EFE6}
+.doubts li::before{content:""; width:8px; height:8px; border-radius:50%; background:#E89A8B; margin-top:9px}
+.chips-q{font-size:14px; font-weight:600; margin:28px 0 10px; color:#F5EFE6}
+.chips{display:flex; flex-wrap:wrap; gap:8px}
+.chip{appearance:none; cursor:pointer; border:1.5px solid rgba(245,239,230,.28); background:transparent; color:#F5EFE6;
+  border-radius:999px; padding:10px 16px; min-height:44px; font-size:14px; line-height:1.3; text-align:left}
+.chip[aria-pressed="true"]{background:#F5EFE6; color:var(--brand-primary); border-color:#F5EFE6; font-weight:600}
+.next .cap{font-size:14px; font-weight:600; color:#F5EFE6; margin:26px 0 0}
+.next .btn{margin-top:10px}
+.btn-line{background:transparent; color:#F5EFE6; border:1.5px solid rgba(245,239,230,.35)}
+.next small{display:block; margin-top:14px; font-size:13px; color:rgba(245,239,230,.7)}
+.method{font-size:12px; letter-spacing:.06em; color:rgba(245,239,230,.66); margin-top:22px; border-top:1px solid rgba(245,239,230,.16); padding-top:16px}
+
+.secondary{display:flex; flex-wrap:wrap; gap:10px; margin-top:20px}
+.secondary .btn{flex:1 1 200px; min-height:52px; font-size:15px}
+.print-only{display:none}
+
+@media (min-width:640px){
+  :root{--gutter:32px}
+  .wrap{padding-block:32px 72px}
+  .next{padding:40px}
+}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation:none!important; transition:none!important}
+}
+
+/* Versión limpia para guardar como PDF */
+@media print{
+  @page{margin:18mm 16mm}
+  :root{--bg:#fff; --ink:#111; --muted:#555; --line:#ddd; --primary:#123B3A; --accent:#B94735; --accent-soft:#F6ECE8}
+  body{background:#fff; color:#111; font-size:11.5pt}
+  .wrap{max-width:none; padding:0; min-height:0}
+  .screen:not(#s-result), .no-print{display:none!important}
+  .print-only{display:block}
+  .fade{animation:none}
+  .block{margin-top:20px; padding-top:14px; break-inside:avoid}
+  .profile .bar i{transition:none}
+  .r-stage{font-size:26pt}
+  .route{font-size:30pt}
+  .moves li, .path li{break-inside:avoid}
+  *{-webkit-print-color-adjust:exact; print-color-adjust:exact}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="brand" id="brand"></div>
+  </header>
+
+  <!-- PORTADA -->
+  <section class="screen fade" id="s-cover" aria-labelledby="coverTitle">
+    <p class="eyebrow" id="coverEyebrow"></p>
+    <h1 class="display" id="coverTitle"></h1>
+    <p class="lead" id="coverPromise"></p>
+    <ul class="learn" id="coverLearn"></ul>
+    <div class="cta-row">
+      <button class="btn btn-primary btn-block" id="startBtn" type="button"></button>
+      <p class="meta" id="coverMeta"></p>
+    </div>
+  </section>
+
+  <!-- PREGUNTAS -->
+  <section class="screen" id="s-quiz" hidden>
+    <div class="progress" id="progress" aria-hidden="true"></div>
+    <div class="qmeta"><span>Pregunta <b id="qNum">1</b> de <b id="qTotal">5</b></span><span id="qPct">0%</span></div>
+    <div id="qBody" class="fade">
+      <div class="qnum" id="qBig" aria-hidden="true">01</div>
+      <h2 class="qtext" id="qText"></h2>
+      <p class="qhint" id="qHint"></p>
+      <div class="opts" id="opts" role="radiogroup" aria-labelledby="qText"></div>
+      <p class="sr-only" id="qEco" aria-live="polite"></p>
+    </div>
+    <div class="nav">
+      <button class="btn btn-ghost" id="prevBtn" type="button">Anterior</button>
+      <button class="btn btn-primary" id="nextBtn" type="button" disabled>Siguiente</button>
+    </div>
+  </section>
+
+  <!-- MOTIVO (sin puntaje: personaliza el resultado) -->
+  <section class="screen" id="s-motive" hidden>
+    <div class="progress full" aria-hidden="true"><span class="beat done"></span><span class="beat done"></span><span class="beat done"></span><span class="beat done"></span><span class="beat now"></span></div>
+    <div class="qmeta"><span id="mEyebrow"></span><span>100%</span></div>
+    <div class="fade">
+      <h2 class="qtext" id="mText" style="margin-top:32px"></h2>
+      <p class="qhint" id="mHint"></p>
+      <div class="opts" id="mOpts" role="radiogroup" aria-labelledby="mText"></div>
+    </div>
+    <div class="nav">
+      <button class="btn btn-ghost" id="mPrev" type="button">Anterior</button>
+      <button class="btn btn-accent" id="mNext" type="button" disabled>Ver mi resultado</button>
+    </div>
+  </section>
+
+  <!-- ANALIZANDO -->
+  <section class="screen" id="s-thinking" hidden>
+    <div class="thinking">
+      <div class="pulse" aria-hidden="true"><span></span><span></span><span></span></div>
+      <p class="label" style="margin:0" id="thinkText" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <!-- RESULTADO -->
+  <section class="screen" id="s-result" hidden>
+    <p class="print-only label" id="printDate"></p>
+
+    <p class="eyebrow">Tu resultado</p>
+    <h2 class="r-stage" id="rStage"></h2>
+    <div aria-hidden="true">
+      <div class="track" id="rTrack"></div>
+      <div class="track-labels"><span>Etapa <span id="rStageN"></span> de 4</span><span id="rScore"></span></div>
+    </div>
+    <p class="stage-text" id="rStageText"></p>
+
+    <div class="block" id="rHearBlock">
+      <p class="label">Antes que nada</p>
+      <p class="hear" id="rHear"></p>
+    </div>
+
+    <div class="block">
+      <p class="label">Lo que más te está frenando es</p>
+      <h3 class="route" id="rRoute"></h3>
+      <p class="bottleneck" id="rTitle"></p>
+    </div>
+
+    <div class="block">
+      <p class="label">Qué está pasando</p>
+      <p class="prose" id="rMeaning"></p>
+    </div>
+
+    <div class="block">
+      <p class="label">Lo que te está costando</p>
+      <p class="prose" id="rCost"></p>
+    </div>
+
+    <div class="block">
+      <p class="label">Lo que probablemente piensas</p>
+      <div class="myth">
+        <p class="belief" id="rBelief" style="margin:0"></p>
+        <p class="truth" id="rTruth"></p>
+      </div>
+    </div>
+
+    <div class="block">
+      <p class="label">Tus 3 primeros movimientos</p>
+      <p class="prose moves-intro" id="rMovesIntro"></p>
+      <ol class="moves" id="rMoves"></ol>
+      <p class="note" id="rMovesNote" style="margin-top:24px"></p>
+    </div>
+
+    <div class="block">
+      <p class="label" id="timeLabel"></p>
+      <p class="prose" id="timeText"></p>
+    </div>
+
+    <div class="block">
+      <p class="label" id="pathLabel"></p>
+      <div class="ab">
+        <div><b>Hoy</b><span id="rPointA"></span></div>
+        <div><b>La meta</b><span id="rPointB"></span></div>
+      </div>
+      <p class="prose gap" id="rGap"></p>
+      <ol class="path" id="rPath"></ol>
+      <p class="note" id="rPathNote"></p>
+    </div>
+
+    <div class="block">
+      <p class="label">Lo que noté en tus respuestas</p>
+      <ul class="profile" id="rProfile"></ul>
+    </div>
+
+    <aside class="next no-print" aria-labelledby="nextTitle">
+      <p class="label">Tu siguiente paso</p>
+      <h3 id="nextTitle"></h3>
+      <p id="nextText"></p>
+      <p id="nextInvite"></p>
+      <p class="doubts-t" id="doubtsTitle"></p>
+      <ul class="doubts" id="doubts"></ul>
+      <p id="nextCalm"></p>
+      <p class="cap" id="capMain"></p>
+      <a class="btn btn-accent btn-block" id="ctaMain" href="#" target="_blank" rel="noopener"></a>
+      <p class="cap" id="capAlt"></p>
+      <a class="btn btn-line btn-block" id="ctaAlt" href="#" target="_blank" rel="noopener"></a>
+      <small id="ctaNote"></small>
+      <div class="method" id="methodLine"></div>
+    </aside>
+
+    <div class="secondary no-print">
+      <button class="btn btn-ghost" id="saveBtn" type="button">Guardar mi resultado</button>
+      <button class="btn btn-ghost" id="restartBtn" type="button">Repetir el diagnóstico</button>
+    </div>
+
+    <div class="print-only block">
+      <p class="label">Siguiente paso</p>
+      <p class="prose" id="printNext"></p>
+    </div>
+  </section>
+</div>
+
+<script>
+/* =====================================================================
+   CONFIGURACIÓN — edita aquí nombre, textos, preguntas, rutas, CTA y enlaces.
+   · Cada pregunta mide un área del Método SABOR (campo "area").
+   · Las respuestas van ordenadas de 0 a 3 puntos (el puntaje no se muestra).
+   · La ruta que recibe cada persona es su área con menor puntaje.
+     Si hay empate, gana la más básica (orden S → A → B → O → R).
+   ===================================================================== */
+const CONFIG = {
+  marca: { nombre: "De Cero a", destacado: "Salsero" },
+
+  portada: {
+    eyebrow: "Diagnóstico",
+    titulo: "¿Por qué te quedas <em>sentado</em> cuando suena la salsa?",
+    promesa: "5 preguntas sencillas. No necesitas saber bailar para responderlas. Al final sabrás qué te frena de verdad y cuál es tu primer paso.",
+    aprenderas: [
+      "Qué te frena de verdad cuando suena la salsa y estás en esa boda, en esa fiesta o frente a esa persona que te encanta.",
+      "Por qué tu mente se queda en blanco justo cuando estás en la pista, y por qué no tiene nada que ver con el talento.",
+      "Cómo aprender aunque el trabajo te deje poco tiempo."
+    ],
+    boton: "Empezar el diagnóstico",
+    meta: "5 preguntas · 2 minutos · Pensado para quien nunca ha bailado"
+  },
+
+  /* ---------- AGENDA ----------
+     calendario: pega aquí el enlace de tu calendario de reservas
+                 (por ejemplo https://calendly.com/tu-usuario/evaluacion).
+                 Si es de Calendly, el resultado se escribe solo en la primera
+                 pregunta personalizada de tu evento.
+                 Si lo dejas vacío (""), el botón principal abre WhatsApp. */
+  calendario: "",
+  whatsapp: "593958980753",          // código de país, sin + ni espacios
+
+  cta: {
+    titulo: "Ya sabes qué te frena. Falta el cómo, en tu caso.",   // se reemplaza por el del motivo elegido
+    // {freno} se reemplaza por el freno principal de la persona.
+    intro: "Ya hiciste lo más difícil: mirar con honestidad qué te pasa. Ahora sabes que lo que más te frena es que {freno}. Y quiero que sepas algo: tiene solución, y no tienes que resolverlo solo.",
+    invitacion: "Me encantaría escucharte. Agenda tu Evaluación De Cero a Salsero: una llamada de 15 minutos por WhatsApp, entre tú y yo.",
+    dudasTitulo: "En esos 15 minutos vamos a:",
+    dudaInicial: "Escuchar tu caso: qué te pasa cuando suena la salsa y qué quieres lograr.",
+    dudas: [
+      "Decirte con total sinceridad si el acompañamiento de 3 meses es para ti. Y si no lo es, te lo voy a decir."
+    ],
+    tranquilidad: "No es una clase: es una conversación entre tú y yo para entender tu caso. Piénsalo así: cada vez que suena una salsa y te quedas sentado, la idea de «yo no soy de los que bailan» se hace más fuerte. Cuanto antes hablemos, antes empieza ese cambio que tanto quieres.",
+    // Dos caminos: quien ya está seguro agenda; quien tiene dudas escribe.
+    textoAgendar: "¿Listo para dar el paso?",
+    botonCalendario: "Elegir día y hora de mi llamada",
+    botonAgendarWhatsapp: "Agendar mi llamada por WhatsApp",   // se usa si no hay calendario
+    textoDuda: "¿Prefieres preguntarme algo antes? Escríbeme con confianza.",
+    botonDuda: "Escribirme por WhatsApp",
+    nota: "En los dos casos tu resultado ya va incluido, así no tienes que explicarlo desde cero.",
+    metodo: "Acompañamiento 1 a 1 · Virtual · 3 meses<br>Siente · Automatiza · Baila · Orienta · Responde",
+    pdf: "Agenda tu Evaluación De Cero a Salsero por WhatsApp: +593 95 898 0753"
+  },
+
+  // Resumen que te llega por WhatsApp (y al calendario). r = resultado completo.
+  mensaje: (r) =>
+    `Hola, hice el diagnóstico "¿Por qué te quedas sentado cuando suena la salsa?".\n\n` +
+    `Etapa: ${r.etapa} (${r.puntos}/${r.maximo})\n` +
+    `Mi ruta: ${r.ruta} – ${r.titulo}\n\n` +
+    `Mis respuestas:\n` +
+    r.respuestas.map((a, i) => `${i + 1}. ${a.tema}: ${a.respuesta}`).join("\n") +
+    (r.motivo ? `\n\nLo que más me mueve: ${r.motivo}` : "") +
+    `\n\n${r.duda ? "Tengo una duda antes de agendar: " : "Quiero agendar mi Evaluación De Cero a Salsero."}`,
+
+  // Textos de la pantalla de carga (se muestran uno tras otro).
+  carga: ["Leyendo tus respuestas", "Encontrando qué te frena", "Trazando tu ruta"],
+
+  /* Pregunta final SIN puntaje: no cambia la ruta, pero personaliza el
+     resultado con el motivo real de la persona. */
+  motivo: {
+    eyebrow: "Una última cosa",
+    texto: "Si fueras totalmente honesto, ¿qué es lo que más te mueve a aprender?",
+    ayuda: "Esto no cambia tu resultado, pero me ayuda a hablarte de lo que de verdad te importa.",
+    opciones: [
+      { texto: "Hay una boda, un viaje o un evento y no quiero volver a quedarme sentado.",
+        corto: "Un evento que se viene",
+        teEntiendo: "Sé lo que se siente: todos se levantan, alguien te dice «¡vamos!» y tú sonríes, pones una excusa y te quedas mirando. Después llega la foto donde todos bailan menos tú. No es que no quieras bailar. Es que nadie te mostró por dónde empezar.",
+        meta: "En tu próximo evento eres tú quien se levanta, invita a alguien y disfruta la canción completa.",
+        cta: "Que el próximo evento sea distinto.",
+        puente: "Si tienes una fecha cerca, cuéntamela en la llamada: vemos qué es realista para ese día y qué construimos con calma después." },
+      { texto: "Quiero bailar con alguien que me gusta.",
+        corto: "Bailar con alguien que me gusta",
+        teEntiendo: "Seguramente te ha pasado: suena la salsa, esa persona está ahí y tú sabes que es el momento perfecto para acercarte. Pero te frena una pregunta: «¿y si hago el ridículo justo frente a ella?». Así que dejas pasar la canción, y con ella la oportunidad.",
+        meta: "Cuando suene la salsa, eres tú quien la invita, y la conexión empieza en la pista.",
+        cta: "Que la próxima vez seas tú quien la invite.",
+        puente: "Y sí, también hablamos de cómo llegar a ese momento con ella sintiéndote seguro, sin forzar nada." },
+      { texto: "El trabajo me absorbe y quiero recuperar mi vida social.",
+        corto: "Recuperar mi vida social",
+        teEntiendo: "Pasa sin darte cuenta: el trabajo se come la semana, los planes se vuelven cada vez menos y, cuando por fin llega una reunión con amigos, te quedas a un lado mientras los demás bailan. No es falta de ganas. Es que nadie te dio un camino que quepa en una agenda llena.",
+        meta: "Vuelves a salir, a conocer gente y a disfrutar las reuniones en lugar de mirarlas desde la mesa.",
+        cta: "Que el baile te saque de la burbuja del trabajo.",
+        puente: "Y todo lo que te proponga va a estar pensado para tu agenda real, no para la de alguien con las tardes libres." },
+      { texto: "Estoy cansado de ser el que siempre se queda sentado.",
+        corto: "Dejar de ser el que se queda sentado",
+        teEntiendo: "Ya lo conoces de memoria: suena la salsa y empieza el ritual. Vas a la barra, sacas el celular, te metes en una conversación. Por fuera parece que no te importa. Por dentro sabes que te encantaría estar ahí, y cada vez pesa un poco más.",
+        meta: "Dejas de esquivar la pista: te levantas, invitas y lo disfrutas sin pensarlo dos veces.",
+        cta: "Que dejes de ser el que mira desde la mesa.",
+        puente: "Lo que más quiero es que la próxima vez que suene una salsa no tengas que inventar ninguna excusa." }
+    ]
+  },
+
+  // Objeción de tiempo (se muestra a todos).
+  tiempo: {
+    titulo: "¿Y si casi no tengo tiempo?",
+    texto: "Es la duda más común, y tiene sentido. Por eso este proceso no se basa en horas de academia, sino en prácticas breves pero frecuentes, guiadas 1 a 1 y de forma virtual. Lo que hace la diferencia no es cuántas horas practicas, sino que cada minuto esté bien dirigido hacia lo que a ti te frena."
+  },
+
+  // Aparece debajo de los 3 movimientos.
+  notaPasos: "¿Y los pasos de baile? Esos prefiero no explicártelos por escrito. Por texto es muy fácil entenderlos mal y aprenderlos con errores que después cuesta corregir. Los pasos se aprenden viéndote, y eso lo hacemos juntos.",
+
+  // Camino de 3 meses. "areas" indica en qué fase empieza cada ruta.
+  camino: {
+    titulo: "Tu camino de A a B",
+    meta: "Te levantas cuando suena la salsa, invitas a alguien y disfrutas la canción completa.",
+    fases: [
+      { cuando: "Mes 1", nombre: "Escuchar y pisar firme", texto: "Encontrar el ritmo y lograr que tu paso salga solo.", areas: ["S", "A"] },
+      { cuando: "Mes 2", nombre: "Bailar una canción completa", texto: "Unir pocos movimientos y aprender a llevar a tu pareja.", areas: ["B", "O"] },
+      { cuando: "Mes 3", nombre: "Llevarlo a la pista real", texto: "Practicar en situaciones reales hasta que se vuelva natural.", areas: ["R"] }
+    ],
+    nota: "No es un curso exprés. Lo que se aprende con prisa se olvida en la siguiente fiesta; lo que se practica con calma se queda contigo. Por eso el proceso dura 3 meses. Y lo que ganas no se queda en la salsa: la seguridad de levantarte, invitar y llevar a alguien se nota también en cómo te presentas, conversas y conectas."
+  },
+
+  // Rutas. Una por área del Método SABOR, de lo más básico a lo más avanzado.
+  // "enLaLlamada" debe completar la frase «En esa llamada vamos a:».
+  rutas: {
+    S: {
+      area: "Siente", etiqueta: "Escuchar la música",
+      ruta: "Ruta Oído",
+      titulo: "Todavía no sabes en qué momento moverte",
+      significado: "La salsa tiene muchos instrumentos sonando a la vez, y tu oído todavía no sabe cuál seguir. Por eso, cuando intentas moverte, no sabes cuándo dar el paso, todo se siente forzado y lo más lógico es quedarte quieto.",
+      costo: "Mientras no encuentres el ritmo, todo lo que intentes aprender después se va a sentir torpe. Es como construir una casa sin cimientos: puedes poner paredes, pero se caen en cuanto hay presión, como en una fiesta llena de gente.",
+      creencia: "«Yo no tengo ritmo. No nací para esto.»",
+      verdad: "El ritmo no es un don, es un oído entrenado. La mayoría de personas que dicen no tener ritmo simplemente nunca aprendieron qué escuchar dentro de la canción. Cuando alguien te lo señala, empiezas a oírlo en todas partes.",
+      // Movimientos según su respuesta en esta área (0, 1 o 2).
+      // t = título · c = qué hacer · p = por qué funciona · s = señal de que va bien.
+      movimientos: {
+        0: [
+          { t: "Escucha lo de fondo, no la voz", c: "Pon «Vivir mi vida» de Marc Anthony. Deja de prestar atención a la voz y busca el sonido de fondo que se repite como un reloj: pum, pum, pum. Golpea la mesa con un dedo en cada «pum».", p: "La voz cambia todo el tiempo y por eso confunde. Lo que se repite de fondo nunca cambia: es la guía que siguen los que bailan.", s: "golpeas la mesa hasta el final de la canción sin perderte." },
+          { t: "Repite siempre las mismas 4 canciones", c: "Esta semana escucha solo estas 4 salsas, en el carro o mientras haces otra cosa: «Vivir mi vida», «Valió la pena», «La rebelión» y «Llorarás».", p: "Si cambias de canción todo el tiempo, tu oído empieza de cero cada vez. Repitiendo las mismas, aprende su orden sin esfuerzo.", s: "sabes cómo sigue cada canción antes de que pase." },
+          { t: "Camina al ritmo", c: "Pon la canción y camina por tu casa dando un paso en cada «pum», como si caminaras por la calle.", p: "Es el primer puente entre escuchar y moverte, sin la presión de tener que «bailar».", s: "tus pasos y la música van juntos." }
+        ],
+        1: [
+          { t: "Primero con el dedo, después con el pie", c: "Pon «Vivir mi vida» de Marc Anthony y golpea la mesa con un dedo en cada «pum» que se repite de fondo. Solo cuando eso te salga fácil, hazlo con el pie.", p: "El dedo es mucho más fácil de controlar que el pie. Si el dedo va a tiempo, el pie lo sigue.", s: "el dedo y la música suenan juntos toda la canción." },
+          { t: "Graba tu pie con el celular", c: "Deja el celular en el piso grabando tu pie mientras suena una salsa, 30 segundos. Luego míralo con sonido.", p: "Desde adentro es difícil saber si vas a tiempo. El video te lo dice sin que tengas que adivinar.", s: "tu pie y el «pum» suenan al mismo tiempo." },
+          { t: "Prueba con 3 canciones distintas", c: "Repite lo mismo con una salsa lenta, una normal y una rápida.", p: "Así tu oído deja de depender de una sola canción.", s: "encuentras el ritmo en pocos segundos en cualquiera de las tres." }
+        ],
+        2: [
+          { t: "Cuando te pierdas, cuenta 4 y vuelve", c: "Si sientes que te perdiste, deja de moverte, cuenta 4 «pum» en tu cabeza y vuelve a empezar en el siguiente.", p: "Seguir a la fuerza te aleja más del ritmo. Cuatro golpes de pausa te devuelven, y nadie lo nota.", s: "te pierdes y vuelves a entrar en segundos." },
+          { t: "Practica siempre con las mismas canciones", c: "Elige 2 salsas que suelan sonar en tus eventos, como «Vivir mi vida» y «La rebelión», y practica solo con ellas hasta que las conozcas de memoria.", p: "Te pierdes cuando la canción te sorprende. Si ya sabes cuándo sube o cambia, te adelantas al cambio.", s: "sabes cuándo viene el cambio antes de que pase." },
+          { t: "Escucha antes de moverte", c: "Escucha la canción una vez sin moverte y nota en qué momento se acelera o entran más instrumentos.", p: "Lo que sabes que viene no te toma por sorpresa.", s: "sabes cuándo viene el cambio antes de que pase." }
+        ]
+      },
+      enLaLlamada: "Darte un primer ajuste para que encuentres el ritmo, pensado para ti."
+    },
+    A: {
+      area: "Automatiza", etiqueta: "Que el paso salga solo",
+      ruta: "Ruta Base",
+      titulo: "Tu paso todavía depende de tu cabeza",
+      significado: "Sabes algo, o casi, pero para hacerlo tienes que pensar en cada movimiento. En una fiesta, con ruido, una pareja y algo de nervios, la cabeza se llena y el paso desaparece.",
+      costo: "Practicas un poco, pero sientes que no avanzas, y cada evento es volver a empezar de cero. Ese desgaste es justo lo que hace que la mayoría abandone, muchas veces cuando le faltaba poco.",
+      creencia: "«Ya vi videos. Debería poder hacerlo.»",
+      verdad: "Ver un paso no es saberlo. El cuerpo aprende repitiendo poco a poco, hasta que el paso sale sin pensar. Por eso en casa te sale y en la fiesta se te borra: todavía no es automático.",
+      // Movimientos según su respuesta en esta área (0, 1 o 2).
+      // t = título · c = qué hacer · p = por qué funciona · s = señal de que va bien.
+      movimientos: {
+        0: [
+          { t: "Cuenta cuántas veces repiten lo mismo", c: "Busca en YouTube «salsa en boda» y mira solo los pies de un hombre durante 30 segundos. Cuenta cuántas veces repite el mismo movimiento.", p: "Vas a ver que repite lo mismo una y otra vez. La salsa de fiesta no es de pasos difíciles: es de pocas cosas repetidas con seguridad.", s: "piensas: «eso sí lo podría hacer yo»." },
+          { t: "Dobla apenas las rodillas", c: "La próxima vez que estés de pie con música, dobla un poquito las rodillas, como si fueras a sentarte en una silla muy alta. Nota cómo cambia tu cuerpo.", p: "Con las rodillas rectas te ves y te sientes tieso. Ese pequeño doblez hace que te veas más natural, incluso antes de saber pasos.", s: "te mueves con la música sin sentirte rígido." },
+          { t: "Reserva 10 minutos, 4 días", c: "Ponle una alarma al celular: 10 minutos, 4 días de esta semana, solo para estar con música.", p: "El cuerpo aprende con repetición frecuente, no con sesiones largas de vez en cuando.", s: "el cuarto día te sientes más suelto que el primero." }
+        ],
+        1: [
+          { t: "Pega un papel en el espejo", c: "Pega un papel pequeño en el espejo a la altura de tus ojos y míralo mientras practicas.", p: "Con un punto fijo al frente dejas de mirarte los pies sin tener que pensarlo.", s: "terminas una canción sin mirar al suelo." },
+          { t: "Lunes en voz alta, viernes en silencio", c: "Si cuentas para no perderte, está bien. El lunes cuenta en voz alta, el miércoles susurrando y el viernes solo en tu cabeza.", p: "Contar es como las rueditas de la bicicleta: ayudan al principio, pero la meta es soltarlas.", s: "te sale sin contar en voz alta." },
+          { t: "Practica con zapatos de fiesta", c: "Usa los zapatos que llevarías a una boda.", p: "Con suela de cuero todo se siente distinto, y es mejor descubrirlo en casa que en la pista.", s: "te sientes igual de cómodo con zapatos de vestir." }
+        ],
+        2: [
+          { t: "Practica diciendo el abecedario", c: "Haz lo que ya sabes mientras dices el abecedario en voz alta. Si se te olvida, empieza otra vez.", p: "Si lo que sabes aguanta mientras tu cabeza está ocupada, también aguanta los nervios de la pista.", s: "llegas a la Z sin que se te olvide nada." },
+          { t: "Que alguien te mire sin decir nada", c: "Pide a alguien de confianza que te mire durante una canción completa en silencio, y que al final te diga una sola cosa que se vio bien.", p: "Acostumbras a tu cuerpo a sentirse observado en un lugar seguro, y te llevas algo bueno en lugar de una crítica.", s: "te miran y no se te olvida nada." },
+          { t: "Practica cambiando de lugar", c: "Cada cierto tiempo, gira y sigue mirando hacia otra pared.", p: "En la pista te mueves y cambias de lugar. Si solo practicas mirando a un lado, te desorientas.", s: "giras y sigues como si nada." }
+        ]
+      },
+      enLaLlamada: "Darte un primer ajuste para que lo que practiques no se te borre en la fiesta."
+    },
+    B: {
+      area: "Baila", etiqueta: "Sostener una canción",
+      ruta: "Ruta Repertorio",
+      titulo: "Te quedas sin ideas a mitad de la canción",
+      significado: "Puedes empezar, pero no tienes una secuencia clara para llenar una canción completa, que dura más o menos 3 minutos. Al poco tiempo te quedas en blanco o repites lo mismo, sientes que se nota y la incomodidad crece.",
+      costo: "Esa sensación de «se nota que no sé» es la que hace que, la próxima vez, prefieras quedarte sentado. Y cada vez que pasa, la idea de que bailar no es lo tuyo se hace un poco más fuerte.",
+      creencia: "«Necesito aprenderme muchos pasos.»",
+      verdad: "Quienes bailan bien en una fiesta usan pocos movimientos, pero bien hechos y bien unidos. Aprender muchos pasos sin una buena base solo te da más cosas que olvidar.",
+      // Movimientos según su respuesta en esta área (0, 1 o 2).
+      // t = título · c = qué hacer · p = por qué funciona · s = señal de que va bien.
+      movimientos: {
+        0: [
+          { t: "Cuenta con los dedos cuántos pasos usa", c: "Busca en YouTube «salsa en boda» y cuenta con los dedos cuántos movimientos distintos hace un hombre durante una canción.", p: "Casi nunca pasan de 3 o 4. Lo que hace que se vea bien no es la cantidad: es que nunca se queda quieto.", s: "te das cuenta de que no hace falta saber 30 pasos." },
+          { t: "Dobla las rodillas y marca el «pum»", c: "Pon una salsa, dobla un poquito las rodillas y marca cada «pum» con un pequeño rebote, sin mover los pies de tu lugar.", p: "Ese pequeño rebote ya es estar bailando: te mantiene en la música mientras decides qué hacer.", s: "aguantas una canción completa sin quedarte quieto." },
+          { t: "Elige tu canción de práctica", c: "Escoge una salsa de unos 3 minutos que te guste y úsala en todas tus prácticas.", p: "Cuando conoces la canción de memoria, sabes qué viene en cada parte y nada te toma por sorpresa.", s: "sabes qué viene en la canción antes de que pase." }
+        ],
+        1: [
+          { t: "Escribe tu plan en el celular", c: "Escribe en una nota del celular los 2 movimientos que mejor te salen, en el orden en que los vas a hacer. Léela antes de levantarte a bailar.", p: "Uno se queda en blanco por decidir en el momento. Si ya lo leíste, tu cabeza sabe qué hacer.", s: "ya no tienes que pensar qué sigue." },
+          { t: "Ponle nombre a tu movimiento más fácil", c: "Elige lo más fácil que sabes y ponle un nombre corto, como «base». Cuando te quedes en blanco, piensa «base» y vuelve a él.", p: "Ponerle nombre hace que tu cabeza lo encuentre al instante, incluso con nervios.", s: "te quedas en blanco y no dejas de bailar." },
+          { t: "Practica canciones completas", c: "Pon una salsa de unos 3 minutos y baila de principio a fin sin parar, aunque te equivoques.", p: "Uno se queda en blanco a mitad porque casi nunca practica una canción completa.", s: "llegas al final sin detenerte." }
+        ],
+        2: [
+          { t: "Usa lo nuevo solo en el coro", c: "Este mes aprende una sola cosa nueva y úsala solo cuando suene el coro de la canción.", p: "Así sabes exactamente cuándo usarla y no se vuelve repetitiva.", s: "la usas en el momento justo, sin pensarlo." },
+          { t: "Vuelve a lo simple entre cada cambio", c: "Busca en YouTube «salsa en boda» y fíjate en qué hace un hombre después de cada vuelta o movimiento nuevo: casi siempre regresa unos segundos a lo más simple. Haz tú lo mismo.", p: "Regresar a lo simple entre un cambio y otro es lo que hace que la variedad se vea natural y no forzada.", s: "tus cambios se ven fluidos, sin cortes." },
+          { t: "Mírate en video", c: "Grábate una canción completa y mírala. Anota en qué momento empiezas a repetir.", p: "Te muestra exactamente dónde necesitas variedad, sin adivinar.", s: "sabes en qué parte de la canción te estancas." }
+        ]
+      },
+      enLaLlamada: "Darte un primer ajuste para que dejes de quedarte en blanco a mitad de la canción."
+    },
+    O: {
+      area: "Orienta", etiqueta: "Llevar a tu pareja",
+      ruta: "Ruta Pareja",
+      titulo: "Todavía no sabes cómo llevar a tu pareja",
+      significado: "En la salsa en pareja, a ti te toca proponer qué hacer. Si tu señal no es clara, la otra persona tiene que adivinar, el baile se siente torpe para los dos y tu seguridad se cae.",
+      costo: "Bailar en pareja es justo lo que quieres disfrutar: con tu pareja, en una boda, en un viaje. Y es donde más incómodo te sientes. Sin saber llevar, los dos terminan adivinando y nadie lo disfruta.",
+      creencia: "«Se va a dar cuenta de que no sé bailar.»",
+      verdad: "A la otra persona no le importa que hagas pasos difíciles. Le importa entender lo que propones y sentirse segura contigo. Eso se logra con señales simples y claras.",
+      // Movimientos según su respuesta en esta área (0, 1 o 2).
+      // t = título · c = qué hacer · p = por qué funciona · s = señal de que va bien.
+      movimientos: {
+        0: [
+          { t: "Invita con la mano abierta", c: "Al invitar, extiende la mano con la palma hacia arriba, a la altura de tu cintura, y espera a que ella la tome. No la jales.", p: "Una mano abierta y quieta dice «te invito» sin presión, y transmite seguridad antes de dar un solo paso.", s: "invitas sin ponerte tenso." },
+          { t: "Ella camina hacia atrás: tú eres sus ojos", c: "Con alguien de confianza, tómense de las manos y caminen por la sala al ritmo de una salsa: tú hacia adelante, ella hacia atrás. Tu trabajo es que no choque con nada.", p: "Cuidar el espacio es lo primero que hace que una mujer se sienta segura bailando contigo, mucho antes que cualquier paso.", s: "caminan una canción completa sin chocar ni pisarse." },
+          { t: "Ten lista tu frase por si pisas", c: "Si pisas, di «perdón, sigamos», sonríe y continúa.", p: "Pisar le pasa a todo el mundo. Lo que se recuerda no es el pisotón, sino cómo reaccionas.", s: "si pasa, sigues tranquilo." }
+        ],
+        1: [
+          { t: "Practica hasta poder cantar el coro", c: "Practica solo hasta que puedas moverte mientras cantas el coro de la canción.", p: "Si puedes cantar, tus pies ya no necesitan tu atención. Y esa atención es para ella.", s: "cantas y bailas al mismo tiempo." },
+          { t: "Mira sus hombros, no sus pies", c: "Al bailar, mira a la altura de sus hombros.", p: "Mirar al suelo transmite inseguridad, y mirarla a los ojos todo el tiempo incomoda. Los hombros son el punto medio perfecto.", s: "terminan la canción sin que mires al suelo." },
+          { t: "Haz una pregunta mientras bailan", c: "Pregunta algo sencillo, como «¿te gusta esta canción?».", p: "Bailar también es conectar. Una pregunta sencilla le quita tensión a los dos.", s: "puedes hablar y bailar a la vez." }
+        ],
+        2: [
+          { t: "Avisa un instante antes", c: "Antes de la vuelta, levanta suavemente tu mano un momento antes, no en el mismo instante.", p: "Ella no puede adivinar: necesita una señal un instante antes para reaccionar.", s: "gira sin que tengas que empujarla." },
+          { t: "Guía como si llevaras un vaso de agua", c: "Imagina que tienes un vaso lleno en la mano con la que la guías: muévela sin derramarlo.", p: "Así la señal es suave y clara, sin jalones que la incomoden.", s: "la vuelta se siente suave para los dos." },
+          { t: "Pregunta cómo se sintió", c: "Al terminar, pregunta: «¿se entendió cuándo venía la vuelta?».", p: "Su respuesta te dice exactamente qué ajustar.", s: "te dicen que sí, sin dudar." }
+        ]
+      },
+      enLaLlamada: "Darte un primer ajuste para que ella se sienta segura bailando contigo."
+    },
+    R: {
+      area: "Responde", etiqueta: "Seguridad en la pista",
+      ruta: "Ruta Pista",
+      titulo: "El miedo a la pista te frena más que los pasos",
+      significado: "Probablemente tienes más bases de las que usas. Lo que te detiene es el momento de levantarte: las miradas, el miedo a equivocarte frente a todos, la sensación de no estar listo.",
+      costo: "Bodas, cumpleaños, viajes, fiestas del trabajo. Cada una que pasa desde la silla es un momento que no vuelve. Y si alguna vez invitaste a alguien y te dijo que no, ese recuerdo pesa todavía más: la idea de «yo no soy de los que bailan» se hace cada vez más fuerte.",
+      creencia: "«Cuando me sienta listo, me lanzo.»",
+      verdad: "Ese momento casi nunca llega solo. La seguridad no aparece antes de bailar: aparece después de bailar varias veces, en situaciones que van de pequeñas a grandes.",
+      // Movimientos según su respuesta en esta área (0, 1 o 2).
+      // t = título · c = qué hacer · p = por qué funciona · s = señal de que va bien.
+      movimientos: {
+        0: [
+          { t: "Completa esta frase antes de salir", c: "Antes de salir de casa, termina esta frase en voz alta: «Hoy bailo la primera salsa lenta con…» y ponle un nombre.", p: "Una decisión con nombre y momento se cumple. Un «a ver si me animo» casi nunca.", s: "sales del evento habiendo bailado esa canción." },
+          { t: "Di tu invitación 3 veces al espejo", c: "Frente al espejo, di 3 veces sonriendo: «¿Bailamos esta?».", p: "Tu cabeza ya lo vivió, así que frente a ella la frase sale sola.", s: "la frase te sale natural." },
+          { t: "Elige bien el momento", c: "Espera una salsa lenta y una pista con bastante gente.", p: "Con más gente bailando nadie te está mirando, y con una canción lenta todo es más fácil.", s: "te levantas en el momento que tú elegiste." }
+        ],
+        1: [
+          { t: "Lee tu plan antes de salir a la pista", c: "Escribe en el celular los 2 movimientos que vas a usar, en orden, y léelos justo antes de salir a bailar.", p: "Uno se queda en blanco cuando no sabe qué hacer. Si lo acabas de leer, tu cabeza ya lo tiene.", s: "cuando te saquen a bailar, sabes qué hacer." },
+          { t: "Ponle nombre a tu movimiento más fácil", c: "Elige lo más fácil que sabes y ponle un nombre corto, como «base». Si te pierdes, piensa «base», vuelve a él y sonríe.", p: "Nadie mira tus pies tanto como crees. Lo que se nota es si te congelas, y esto evita que pase.", s: "te pierdes y sigues, sin congelarte." },
+          { t: "Invita tú, una vez", c: "La próxima vez, en lugar de esperar a que te saquen, invita tú a alguien a bailar una salsa lenta.", p: "Cuando tú eliges la canción y el momento, llegas con más control y menos nervios.", s: "bailas porque tú lo decidiste." }
+        ],
+        2: [
+          { t: "Di «¿una más?»", c: "Cuando termine la primera canción, en lugar de agradecer y sentarte, di: «¿Una más?».", p: "La primera es la de los nervios. En la segunda ya estás suelto, y esas dos palabras te llevan ahí.", s: "bailas dos canciones seguidas." },
+          { t: "Practica con las canciones que siempre suenan", c: "Practica en casa con 2 o 3 salsas que suelen sonar en los eventos, como «Vivir mi vida» o «La rebelión».", p: "Cuando suenen, tu cuerpo las reconoce y se suelta, porque ya sabe qué hacer.", s: "sabes qué hacer durante toda la canción." },
+          { t: "Suelta el error rápido", c: "Si algo sale mal, ríete, vuelve a lo más fácil que sabes y sigue.", p: "La gente no recuerda tu error: recuerda que te divertiste.", s: "un error ya no te saca de la pista." }
+        ]
+      },
+      enLaLlamada: "Darte un primer ajuste para llegar con más seguridad a tu próximo evento."
+    }
+  },
+
+  // Si alguien responde todo en el nivel más alto, recibe esta ruta.
+  rutaSoltura: {
+    area: "Todas", ruta: "Ruta Soltura",
+    titulo: "Tienes las bases: te falta pulir el detalle",
+    significado: "Sigues la música, el paso te sale solo, sostienes una canción, llevas a tu pareja y te levantas a bailar. Lo que queda no es aprender desde cero, sino afinar.",
+    costo: "Cuando ya bailas, lo fácil es quedarse siempre con lo mismo. Sin un siguiente reto claro, el baile deja de crecer y se vuelve repetitivo.",
+    creencia: "«Ya bailo, no necesito más.»",
+    verdad: "Bailar y bailar con soltura son cosas distintas. La diferencia está en los detalles: postura, musicalidad y variedad.",
+    movimientos: [
+      "Grábate bailando una canción completa y elige un solo detalle para mejorar esta semana: postura, brazos o el cierre de las vueltas.",
+      "Baila con tres parejas distintas en tu próximo evento y nota con cuál te costó más. Ahí está tu siguiente ajuste.",
+      "Escoge una salsa más rápida de lo normal y mantén el paso a tiempo durante toda la canción."
+    ],
+    enLaLlamada: "Darte un primer ajuste sobre el detalle que más te conviene pulir."
+  },
+
+  // Etapas según el puntaje total (máximo 15). "desde" es el mínimo de cada etapa.
+  etapas: [
+    { desde: 0,  nombre: "En la silla",
+      hoy: "Cuando suena la salsa, la ves pasar desde la mesa.",
+      texto: "Hoy, cuando suena la salsa, lo más probable es que la veas pasar desde la mesa. Es el punto de partida más común, y la buena noticia es que ahora sabes por dónde empezar." },
+    { desde: 5,  nombre: "En la orilla de la pista",
+      hoy: "Tienes algunas piezas, pero no te alcanzan para levantarte tranquilo.",
+      texto: "Tienes algunas piezas, pero todavía no te alcanzan para levantarte con tranquilidad. Hay un punto concreto que pesa más que el resto." },
+    { desde: 9,  nombre: "Con un pie en la pista",
+      hoy: "Ya te mueves, pero todavía no lo disfrutas.",
+      texto: "Ya te mueves, pero algo todavía te impide disfrutarlo de verdad. Resolver un solo punto puede cambiar cómo vives tu próximo evento." },
+    { desde: 13, nombre: "Listo para soltarte",
+      hoy: "Tienes bases, pero falta soltura.",
+      texto: "Tienes bases sólidas. Lo que queda es pulir el detalle que separa bailar de bailar con soltura." }
+  ],
+
+  // Preguntas. "tema" es la etiqueta corta del mensaje; "ayuda" es opcional.
+  // "eco": reacción breve que aparece al elegir cada respuesta.
+  // "lecturas": lo que el resultado le dice sobre cada respuesta (mismo orden que "respuestas").
+  preguntas: [
+    { area: "R", tema: "En una fiesta",
+      texto: "Piensa en la última boda o fiesta a la que fuiste. Empieza una salsa y la pista se llena. ¿Qué hiciste tú?",
+      ayuda: "Aquí no hay respuestas buenas ni malas. Elige la que más se parezca a ti.",
+      respuestas: [
+        "Me quedé en la mesa: conversando, con el celular o yendo por algo a la barra.",
+        "Bailé porque alguien me sacó, pero me quedé en blanco y solo quería que terminara.",
+        "Me animé a una canción, pero no supe qué más hacer y no repetí.",
+        "Invité yo a alguien y lo disfruté."
+      ],
+      eco: ["Te entiendo. Es el punto de partida de la mayoría.", "Le pasa a muchos. Las ganas están, y eso es lo importante.", "Levantarte ya fue lo más difícil. Vamos bien.", "Excelente. Esa seguridad vale oro."],
+      lecturas: [
+        "Hoy prefieres esquivar la pista. Es más común de lo que crees, y tiene solución cuando sabes qué te frena.",
+        "Cuando te sacan, te animas: las ganas están. Lo que falta es saber qué hacer una vez que estás ahí.",
+        "Ya te atreves a levantarte, y ese es el paso más difícil. Ahora toca que bailar se sienta cómodo y no un esfuerzo.",
+        "Te levantas e invitas. La seguridad para dar el primer paso ya la tienes de tu lado."
+      ]},
+    { area: "S", tema: "Escuchar la música",
+      texto: "Suena una salsa. Sin pensarlo mucho, ¿tu cuerpo sabe en qué momento moverse?",
+      ayuda: "No importa si nunca has bailado: responde según lo que escuchas.",
+      respuestas: [
+        "No. Escucho muchos instrumentos a la vez y no sé cuándo dar el paso.",
+        "A veces muevo el pie con la música, pero no sé si lo hago bien.",
+        "Lo siento al principio, pero si la canción se acelera, me pierdo.",
+        "Sí, sigo la música sin problema durante toda la canción."
+      ],
+      eco: ["Tiene sentido: nadie te enseñó qué escuchar. Eso se aprende.", "Tu cuerpo ya responde a la música. Buena señal.", "Muy común, y tiene un ajuste concreto.", "Gran ventaja: tu oído ya está listo."],
+      lecturas: [
+        "Todavía no sabes cuándo moverte. Es lo primero que se entrena, y se logra con ejercicios muy simples.",
+        "Tu cuerpo ya reacciona a la música. Solo falta confirmar que vas a tiempo.",
+        "Encuentras el ritmo; lo que falta es sostenerlo cuando la canción cambia.",
+        "Tu oído ya está listo, y eso es una gran ventaja para todo lo demás."
+      ]},
+    { area: "A", tema: "Qué hacer con los pies",
+      texto: "Si ahora mismo alguien te dijera «ven, bailemos», ¿qué harían tus pies?",
+      ayuda: "",
+      respuestas: [
+        "Nada. No sé ni un paso de salsa.",
+        "Algo intentaría, pero mirándome los pies y contando en voz baja.",
+        "Tengo un paso que me sale, pero si me hablan o me pongo nervioso, se me olvida.",
+        "Bailaría tranquilo: el paso me sale sin pensar."
+      ],
+      eco: ["Perfecto. Así empezó todo el que hoy baila.", "Normal al principio: el paso todavía depende de tu cabeza.", "Ya tienes una base. Falta que aguante los nervios.", "Muy bien. Esa base te va a ayudar mucho."],
+      lecturas: [
+        "Partes de cero con los pies, y está bien: así empezó todo el que hoy baila.",
+        "Tienes una idea del paso, pero todavía depende de mirar y contar.",
+        "Ya tienes un paso propio. Falta que aguante aunque te distraigas.",
+        "Tu paso sale solo. Esa base te permite avanzar con calma."
+      ]},
+    { area: "B", tema: "Una canción completa",
+      texto: "Una salsa dura más o menos 3 minutos. Si ya estás en la pista, ¿hasta dónde llegas?",
+      ayuda: "",
+      respuestas: [
+        "No llegaría ni a empezar. No sabría qué hacer.",
+        "Unos segundos, y luego me quedaría parado sin saber cómo seguir.",
+        "Toda la canción, pero repitiendo el mismo movimiento una y otra vez.",
+        "Toda la canción, cambiando de movimientos con naturalidad."
+      ],
+      eco: ["Tranquilo: con pocos movimientos bien unidos, esto cambia.", "Quedarse en blanco es de lo más común. Tiene solución.", "Llegar al final ya es mucho. Solo falta variedad.", "Eso es más de lo que logra la mayoría."],
+      lecturas: [
+        "Todavía no tienes con qué llenar una canción. Con 3 movimientos bien unidos, eso cambia.",
+        "Arrancas, pero te quedas en blanco. No es falta de talento: falta una secuencia clara.",
+        "Llegas al final, aunque repitiendo. Sumar pocos movimientos te dará la variedad que buscas.",
+        "Sostienes la canción con variedad, algo que a la mayoría le cuesta."
+      ]},
+    { area: "O", tema: "Con pareja",
+      texto: "Imagina que por fin bailas con esa persona con la que te gustaría bailar. ¿Qué pasaría?",
+      ayuda: "Si nunca has bailado en pareja, responde lo que imaginas.",
+      respuestas: [
+        "No sabría ni cómo tomarle la mano, y me daría miedo pisarla.",
+        "Estaría tan pendiente de mis pies que no podría ni mirarla.",
+        "Intentaría una vuelta, pero seguramente saldría brusca o no se entendería.",
+        "La llevaría con seguridad y ella me seguiría sin problema."
+      ],
+      eco: ["Es normal sentir eso. Llevar a alguien se aprende.", "Pasa muchísimo: la atención se va a los pies.", "Ya te animas a proponer, y eso dice mucho.", "Excelente. Ella se sentiría segura contigo."],
+      lecturas: [
+        "Bailar con alguien todavía te genera dudas. Es normal: llevar a otra persona se aprende con señales simples.",
+        "Hoy tu atención se va a los pies. Cuando el paso salga solo, podrás estar presente con la otra persona.",
+        "Ya intentas proponer. Falta que tus señales sean más suaves y claras.",
+        "Llevas con seguridad, y la otra persona se siente cómoda contigo."
+      ]}
+  ]
+};
+/* =================== FIN DE LA CONFIGURACIÓN =================== */
+
+const $ = (id) => document.getElementById(id);
+const Q = CONFIG.preguntas;
+const ORDER = Object.keys(CONFIG.rutas);          // S, A, B, O, R
+const MAX = Q.length * 3;
+let answers = new Array(Q.length).fill(null);
+let current = 0;
+let advanceTimer = null;
+let motivo = null;           // índice de CONFIG.motivo.opciones
+let result = null;
+const pad = (n) => String(n).padStart(2, "0");
+
+/* Portada */
+$("brand").innerHTML = `${CONFIG.marca.nombre} <b>${CONFIG.marca.destacado}</b>`;
+$("coverEyebrow").textContent = CONFIG.portada.eyebrow;
+$("coverTitle").innerHTML = CONFIG.portada.titulo;
+$("coverPromise").textContent = CONFIG.portada.promesa;
+$("coverMeta").textContent = CONFIG.portada.meta;
+$("startBtn").textContent = CONFIG.portada.boton;
+$("coverLearn").innerHTML = CONFIG.portada.aprenderas
+  .map((t, i) => `<li><i>${pad(i + 1)}</i><span>${t}</span></li>`).join("");
+$("qTotal").textContent = Q.length;
+$("progress").innerHTML = Q.map(() => `<span class="beat"></span>`).join("");
+
+function show(id){
+  document.querySelectorAll(".screen").forEach(s => s.hidden = s.id !== id);
+  const el = $(id);
+  el.classList.remove("fade"); void el.offsetWidth; el.classList.add("fade");
+  window.scrollTo({ top: 0 });
+}
+
+function renderQuestion(){
+  const q = Q[current];
+  $("qNum").textContent = current + 1;
+  $("qBig").textContent = pad(current + 1);
+  $("qPct").textContent = Math.round(current / Q.length * 100) + "%";
+  [...$("progress").children].forEach((b, i) => {
+    b.className = "beat" + (i < current ? " done" : i === current ? " now" : "");
+  });
+  $("qText").textContent = q.texto;
+  $("qHint").textContent = q.ayuda || "";
+  $("qHint").hidden = !q.ayuda;
+  $("opts").innerHTML = q.respuestas.map((r, i) => `
+    <button type="button" class="opt" role="radio" data-i="${i}" aria-checked="${answers[current] === i}">
+      <span class="dot" aria-hidden="true"></span><span>${r}<span class="opt-eco" aria-hidden="true">${answers[current] === i && q.eco ? q.eco[i] : ""}</span></span>
+    </button>`).join("");
+  $("qEco").textContent = answers[current] !== null && q.eco ? q.eco[answers[current]] : "";
+  $("prevBtn").textContent = current === 0 ? "Volver" : "Anterior";
+  $("nextBtn").textContent = "Siguiente";
+  $("nextBtn").disabled = answers[current] === null;
+  const body = $("qBody");
+  body.classList.remove("fade"); void body.offsetWidth; body.classList.add("fade");
+}
+
+$("opts").addEventListener("click", (e) => {
+  const opt = e.target.closest(".opt"); if (!opt) return;
+  answers[current] = +opt.dataset.i;
+  $("opts").querySelectorAll(".opt").forEach(o => o.setAttribute("aria-checked", o === opt));
+  $("nextBtn").disabled = false;
+  clearTimeout(advanceTimer);
+  const eco = Q[current].eco ? Q[current].eco[answers[current]] : "";
+  $("qEco").textContent = eco;
+  $("opts").querySelectorAll(".opt-eco").forEach(el => el.textContent = el.closest(".opt") === opt ? eco : "");
+  advanceTimer = setTimeout(goNext, eco ? 1500 : 380);   // avanza solo, dando tiempo a leer la reacción
+});
+
+function goNext(){
+  clearTimeout(advanceTimer);
+  if (answers[current] === null) return;
+  if (current < Q.length - 1){ current++; renderQuestion(); }
+  else finish();
+}
+function goPrev(){
+  clearTimeout(advanceTimer);
+  if (current === 0){ show("s-cover"); return; }
+  current--; renderQuestion();
+}
+$("nextBtn").addEventListener("click", goNext);
+$("prevBtn").addEventListener("click", goPrev);
+$("startBtn").addEventListener("click", () => { current = 0; show("s-quiz"); renderQuestion(); });
+
+/* Cálculo del resultado */
+function compute(){
+  const byArea = {};
+  ORDER.forEach(k => byArea[k] = { sum: 0, n: 0 });
+  Q.forEach((q, i) => { byArea[q.area].sum += answers[i]; byArea[q.area].n++; });
+  const pct = (k) => byArea[k].n ? byArea[k].sum / (byArea[k].n * 3) : 1;
+  const total = answers.reduce((a, b) => a + b, 0);
+  const lowest = ORDER.reduce((best, k) => pct(k) < pct(best) ? k : best, ORDER[0]);
+  const allTop = pct(lowest) >= 1;
+  const etapaIdx = CONFIG.etapas.reduce((acc, s, i) => total >= s.desde ? i : acc, 0);
+  return { pct, total, key: allTop ? null : lowest, ruta: allTop ? CONFIG.rutaSoltura : CONFIG.rutas[lowest],
+           etapaIdx, etapa: CONFIG.etapas[etapaIdx] };
+}
+
+/* Pregunta final (motivo) */
+const M = CONFIG.motivo;
+$("mEyebrow").textContent = M.eyebrow;
+$("mText").textContent = M.texto;
+$("mHint").textContent = M.ayuda;
+$("mOpts").innerHTML = M.opciones.map((o, i) => `
+  <button type="button" class="opt" role="radio" data-i="${i}" aria-checked="false">
+    <span class="dot" aria-hidden="true"></span><span>${o.texto}</span>
+  </button>`).join("");
+$("mOpts").addEventListener("click", (e) => {
+  const opt = e.target.closest(".opt"); if (!opt) return;
+  motivo = +opt.dataset.i;
+  $("mOpts").querySelectorAll(".opt").forEach(o => o.setAttribute("aria-checked", o === opt));
+  $("mNext").disabled = false;
+});
+$("mPrev").addEventListener("click", () => { show("s-quiz"); renderQuestion(); });
+$("mNext").addEventListener("click", () => { if (motivo !== null) showThinking(); });
+
+function finish(){
+  $("mOpts").querySelectorAll(".opt").forEach((o, i) => o.setAttribute("aria-checked", i === motivo));
+  $("mNext").disabled = motivo === null;
+  show("s-motive");
+}
+
+function showThinking(){
+  show("s-thinking");
+  const steps = CONFIG.carga, wait = 750;
+  steps.forEach((t, i) => setTimeout(() => $("thinkText").textContent = t, i * wait));
+  setTimeout(renderResult, steps.length * wait + 150);
+}
+
+// Lecturas de las respuestas que pertenecen a un área
+const readings = (k) => Q.map((q, i) => q.area === k && q.lecturas ? q.lecturas[answers[i]] : null).filter(Boolean);
+
+function renderResult(){
+  result = compute();
+  const { ruta, etapa, etapaIdx, total, key, pct } = result;
+
+  $("printDate").textContent = `${CONFIG.marca.nombre} ${CONFIG.marca.destacado} · Diagnóstico · ` +
+    new Date().toLocaleDateString("es", { day: "numeric", month: "long", year: "numeric" });
+  $("rStage").textContent = etapa.nombre;
+  $("rStageN").textContent = etapaIdx + 1;
+  $("rScore").textContent = `${total} de ${MAX}`;
+  $("rStageText").textContent = etapa.texto;
+  $("rTrack").innerHTML = CONFIG.etapas.map((_, i) =>
+    `<span class="${i < etapaIdx ? "on" : i === etapaIdx ? "here" : ""}"></span>`).join("");
+
+  const mot = motivo !== null ? M.opciones[motivo] : null;
+  $("rHearBlock").hidden = !mot;
+  $("rHear").textContent = mot ? mot.teEntiendo : "";
+  $("timeLabel").textContent = CONFIG.tiempo.titulo;
+  $("timeText").textContent = CONFIG.tiempo.texto;
+
+  $("rRoute").textContent = ruta.ruta;
+  $("rTitle").textContent = ruta.titulo;
+  $("rMeaning").textContent = ruta.significado;
+  $("rCost").textContent = ruta.costo;
+  $("rBelief").textContent = ruta.creencia;
+  $("rTruth").textContent = ruta.verdad;
+  const qKey = key ? Q.findIndex(q => q.area === key) : -1;
+  const lvl = qKey >= 0 ? answers[qKey] : 0;
+  const moves = Array.isArray(ruta.movimientos) ? ruta.movimientos : (ruta.movimientos[lvl] || ruta.movimientos[0]);
+  $("rMovesIntro").textContent = qKey >= 0 ? `Me dijiste: «${Q[qKey].respuestas[lvl]}» Por eso, empieza exactamente por aquí:` : "";
+  $("rMovesIntro").hidden = qKey < 0;
+  $("rMovesNote").textContent = CONFIG.notaPasos;
+  $("rMoves").innerHTML = moves.map((m, i) => typeof m === "string"
+    ? `<li><span class="num">${pad(i + 1)}</span><span>${m}</span></li>`
+    : `<li><span class="num">${pad(i + 1)}</span><div><p class="mt">${m.t}</p><p class="mc">${m.c}</p>${m.p ? `<p class="mp"><b>Por qué funciona:</b> ${m.p}</p>` : ""}<p class="ms"><b>Vas bien cuando</b> ${m.s}</p></div></li>`).join("");
+
+  // Camino de A a B
+  const c = CONFIG.camino;
+  const startPhase = key ? c.fases.findIndex(f => f.areas.includes(key)) : c.fases.length - 1;
+  $("pathLabel").textContent = c.titulo;
+  $("rPointA").textContent = etapa.hoy;
+  $("rPointB").textContent = mot ? mot.meta : c.meta;
+  $("rPath").innerHTML = c.fases.map((f, i) => `
+    <li class="${i === startPhase ? "here" : ""}"><span class="pt" aria-hidden="true"></span>
+      <div><div class="ph">${f.cuando}${i === startPhase ? "<em>Empiezas aquí</em>" : ""}</div>
+      <div class="pn">${f.nombre}</div><div class="pd">${f.texto}</div></div></li>`).join("");
+  $("rPathNote").textContent = c.nota;
+  $("rGap").textContent = key
+    ? `Lo que te separa de la meta no son 50 pasos nuevos. Es resolver primero una cosa: ${ruta.titulo.charAt(0).toLowerCase() + ruta.titulo.slice(1)}.`
+    : "Lo que te separa de la meta no es aprender más pasos, sino pulir los detalles.";
+
+  $("rProfile").innerHTML = ORDER.map(k => {
+    const a = CONFIG.rutas[k];
+    return `<li class="${k === key ? "key" : ""}">
+      <span class="l">${k}</span>
+      <div><div class="n"><span>${a.area} · ${a.etiqueta}</span><span>${k === key ? "Tu prioridad" : ""}</span></div>
+      <div class="bar"><i data-w="${Math.max(6, Math.round(pct(k) * 100))}"></i></div>
+      ${readings(k).map(t => `<p class="read">${t}</p>`).join("")}</div></li>`;
+  }).join("");
+  requestAnimationFrame(() => requestAnimationFrame(() =>
+    $("rProfile").querySelectorAll(".bar i").forEach(b => b.style.width = b.dataset.w + "%")));
+
+  // Siguiente paso
+  $("nextTitle").textContent = mot ? mot.cta : CONFIG.cta.titulo;
+  const freno = ruta.titulo.charAt(0).toLowerCase() + ruta.titulo.slice(1);
+  $("nextText").textContent = key ? CONFIG.cta.intro.replace("{freno}", freno)
+    : "Ya hiciste lo más difícil: mirar con honestidad dónde estás. Tienes bases, y lo que queda es pulir detalles.";
+  $("nextInvite").textContent = CONFIG.cta.invitacion + (mot && mot.puente ? " " + mot.puente : "");
+  $("doubtsTitle").textContent = CONFIG.cta.dudasTitulo;
+  $("doubts").innerHTML = [CONFIG.cta.dudaInicial, ruta.enLaLlamada, ...CONFIG.cta.dudas].map(d => `<li>${d}</li>`).join("");
+  $("nextCalm").textContent = CONFIG.cta.tranquilidad;
+  $("ctaNote").textContent = CONFIG.cta.nota;
+  $("methodLine").innerHTML = CONFIG.cta.metodo;
+  $("printNext").textContent = `En la llamada vamos a ${ruta.enLaLlamada.charAt(0).toLowerCase() + ruta.enLaLlamada.slice(1)} ${CONFIG.cta.pdf}`;
+  updateCta();
+  show("s-result");
+}
+
+function updateCta(){
+  const { ruta, etapa, total } = result;
+  const data = {
+    etapa: etapa.nombre, puntos: total, maximo: MAX,
+    ruta: ruta.ruta, titulo: ruta.titulo,
+    respuestas: Q.map((q, i) => ({ tema: q.tema, respuesta: q.respuestas[answers[i]] })),
+    motivo: motivo !== null ? M.opciones[motivo].corto : null
+  };
+  const msg = CONFIG.mensaje(data);
+  const waLink = (t) => `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(t)}`;
+  const main = $("ctaMain"), alt = $("ctaAlt");
+  $("capMain").textContent = CONFIG.cta.textoAgendar;
+  $("capAlt").textContent = CONFIG.cta.textoDuda;
+  alt.href = waLink(CONFIG.mensaje({ ...data, duda: true }));
+  alt.textContent = CONFIG.cta.botonDuda;
+  if (CONFIG.calendario){
+    let url = CONFIG.calendario;
+    try {
+      const u = new URL(CONFIG.calendario);
+      if (u.hostname.endsWith("calendly.com")) u.searchParams.set("a1", msg);   // 1.ª pregunta del evento
+      url = u.toString();
+    } catch (e) {}
+    main.href = url; main.textContent = CONFIG.cta.botonCalendario;
+  } else {
+    main.href = waLink(msg); main.textContent = CONFIG.cta.botonAgendarWhatsapp;
+  }
+}
+
+$("saveBtn").addEventListener("click", () => window.print());
+$("restartBtn").addEventListener("click", () => {
+  answers = new Array(Q.length).fill(null); current = 0; motivo = null; show("s-cover");
+});
+
+/* Teclado: 1–4 elige respuesta, flechas navegan */
+document.addEventListener("keydown", (e) => {
+  if ($("s-quiz").hidden) return;
+  if (e.key >= "1" && e.key <= "4"){ const o = $("opts").children[+e.key - 1]; if (o) o.click(); }
+  else if (e.key === "ArrowRight"){ if (!$("nextBtn").disabled) goNext(); }
+  else if (e.key === "ArrowLeft") goPrev();
+});
+</script>
+</body>
+</html>
