@@ -8,6 +8,8 @@
 <meta property="og:title" content="¿Por qué te quedas sentado cuando suena la salsa?">
 <meta property="og:description" content="5 preguntas. 2 minutos. No necesitas saber bailar para responderlas.">
 <meta name="theme-color" content="#123B3A">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://de-cero-a-salsero.vercel.app/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600&display=swap">
@@ -82,8 +84,9 @@ h1,h2,h3{margin:0; text-wrap:balance}
 /* Portada */
 h1.display{font-size:clamp(40px, 12vw, 70px); line-height:.98}
 .lead{color:var(--muted); font-size:16px; margin:18px 0 0; max-width:36ch}
-.learn{list-style:none; margin:26px 0 0; padding:0; display:grid; gap:12px; border-top:1px solid var(--line); padding-top:20px}
-.learn li{display:grid; grid-template-columns:32px 1fr; gap:8px; align-items:baseline; font-size:15px}
+.learn{list-style:none; margin:20px 0 0; padding:0; display:grid; gap:10px; border-top:1px solid var(--line); padding-top:16px}
+.learn[hidden]{display:none}
+.learn li{display:grid; grid-template-columns:32px 1fr; gap:8px; align-items:baseline; font-size:14.5px; line-height:1.5}
 .learn li i{font-style:normal; font-family:var(--font-display); font-size:16px; color:var(--accent)}
 .meta{font-size:13px; color:var(--muted); margin:14px 0 0; text-align:center}
 
@@ -96,7 +99,7 @@ h1.display{font-size:clamp(40px, 12vw, 70px); line-height:.98}
 .btn-ghost{background:transparent; border:1.5px solid var(--line); color:var(--ink)}
 .btn-block{width:100%}
 .btn[disabled]{opacity:.35; cursor:default}
-.cta-row{margin-top:auto; padding-top:28px}
+.cta-row{margin-top:auto; padding-top:20px}
 
 /* Progreso */
 .progress{display:grid; grid-template-columns:repeat(5,1fr); gap:6px; margin-bottom:12px}
@@ -151,7 +154,48 @@ h1.display{font-size:clamp(40px, 12vw, 70px); line-height:.98}
 .prose{margin:0; max-width:62ch}
 .prose + .prose{margin-top:12px}
 
-.hear{margin:0; font-size:18px; line-height:1.55; font-weight:500}
+.hear{margin:28px 0 0; font-size:17px; line-height:1.55; font-weight:500}
+.lead-strong{color:var(--ink); font-weight:500}
+.lead + .lead{margin-top:12px}
+
+/* Resumen del resultado */
+.r-head{font-family:var(--font-display); font-weight:400; text-transform:uppercase; font-size:clamp(32px, 9.6vw, 46px); line-height:1.02; color:var(--primary)}
+.r-stage-line{margin:16px 0 0; font-weight:600}
+.r-score{color:var(--muted); font-weight:400}
+#rTrack{margin-top:12px}
+#rPrio{margin-top:12px}
+.first .mt{margin:0; font-weight:600; font-size:17px; line-height:1.35}
+.first .mc{margin:6px 0 0}
+.first .ms{margin:12px 0 0; font-size:14px; color:var(--muted); padding:10px 12px; background:var(--accent-soft); border-radius:10px}
+.first .ms b, .moves .ms b{display:block; color:var(--accent); font-weight:600; font-size:11px; letter-spacing:.14em; margin-bottom:2px}
+.more{margin-top:24px}
+.testi{margin:0}
+.testi-frame{position:relative; width:100%; max-width:380px; margin:0 auto; aspect-ratio:4/5; border-radius:18px; overflow:hidden; background:var(--brand-primary)}
+.testi video{width:100%; height:100%; object-fit:cover; display:block; background:var(--brand-primary); filter:brightness(1.32) contrast(1.06) saturate(1.06)}   /* un poco más de luz al video */
+.testi figcaption{max-width:380px; margin:16px auto 0}
+.testi-quote{margin:0; font-size:17px; font-weight:500; line-height:1.45}
+.testi-name{margin:12px 0 0; font-weight:600}
+.testi-frase{margin:0; font-size:17px; font-weight:600; line-height:1.45; color:var(--primary)}
+.testi-quote + .testi-frase{margin-top:12px}
+.testi-detail{margin:2px 0 0; font-size:14px; color:var(--muted)}
+.juan{display:grid; grid-template-columns:72px minmax(0,1fr); gap:16px; align-items:start}
+.juan-photo{width:72px; height:72px; border-radius:50%; object-fit:cover; box-shadow:0 0 0 3px var(--bg), 0 0 0 5px var(--brand-accent)}
+.juan-name{font-family:var(--font-display); font-weight:400; text-transform:uppercase; font-size:26px; line-height:1.05; color:var(--primary); margin-bottom:8px}
+.next p b{color:#F5EFE6; font-weight:600}
+.next-line{display:block; width:44px; height:3px; border-radius:2px; background:var(--brand-accent); margin-bottom:18px}
+.repeat{text-align:center; margin:22px 0 0}
+.link-btn{appearance:none; background:none; border:0; cursor:pointer; color:var(--muted); text-decoration:underline; font-size:14px; min-height:44px; padding:0 12px}
+
+/* Ruta completa (desplegable) */
+.more > summary{list-style:none; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:10px;
+  min-height:52px; padding:0 20px; border:1.5px solid var(--line); border-radius:999px;
+  font-weight:600; font-size:14px; letter-spacing:.02em; color:var(--primary); text-align:center}
+.more > summary::-webkit-details-marker{display:none}
+.more > summary::after{content:"+"; font-size:20px; line-height:1; color:var(--accent)}
+.more[open] > summary::after{content:"–"}
+.more > summary:hover{border-color:var(--muted)}
+.more-body > .block:first-child{margin-top:28px}
+.path-note{font-size:14px; color:var(--muted); margin:0 0 16px}
 
 /* Creencia vs. realidad */
 .myth{display:grid; gap:18px}
@@ -166,7 +210,6 @@ h1.display{font-size:clamp(40px, 12vw, 70px); line-height:.98}
 .moves .mp{margin:8px 0 0; font-size:14.5px; color:var(--muted)}
 .moves .mp b{color:var(--ink); font-weight:600}
 .moves .ms{margin:10px 0 0; font-size:14px; color:var(--muted); padding:10px 12px; background:var(--accent-soft); border-radius:10px}
-.moves .ms b{color:var(--accent); font-weight:600}
 .moves .num{font-family:var(--font-display); font-size:24px; line-height:1.15; color:var(--accent)}
 
 /* Camino de A a B */
@@ -204,8 +247,9 @@ h1.display{font-size:clamp(40px, 12vw, 70px); line-height:.98}
 
 /* Siguiente paso */
 .next{background:var(--brand-primary); color:#F5EFE6; border-radius:22px; padding:32px 22px; margin-top:48px}
-.next .label{color:#E89A8B}
-.next h3{font-family:var(--font-display); font-weight:400; text-transform:uppercase; font-size:clamp(30px, 8.6vw, 40px); line-height:1.02}
+.next h3{font-family:var(--font-display); font-weight:400; text-transform:uppercase; font-size:clamp(28px, 8vw, 38px); line-height:1.05; color:#F5EFE6; overflow-wrap:break-word}
+.btn-cta{background:#F5EFE6; color:var(--brand-primary); font-weight:600; letter-spacing:.02em; min-height:56px; padding:0 14px; margin-top:26px!important}
+.btn-cta:hover{background:#FFFFFF}
 .next p{margin:14px 0 0; color:rgba(245,239,230,.86)}
 .doubts-t{font-weight:600; color:#F5EFE6!important; margin-top:22px!important}
 .doubts{list-style:none; margin:12px 0 0; padding:0; display:grid; gap:10px}
@@ -243,6 +287,8 @@ h1.display{font-size:clamp(40px, 12vw, 70px); line-height:.98}
   .wrap{max-width:none; padding:0; min-height:0}
   .screen:not(#s-result), .no-print{display:none!important}
   .print-only{display:block}
+  .more > summary{display:none}
+  .more{margin-top:0}
   .fade{animation:none}
   .block{margin-top:20px; padding-top:14px; break-inside:avoid}
   .profile .bar i{transition:none}
@@ -263,6 +309,7 @@ h1.display{font-size:clamp(40px, 12vw, 70px); line-height:.98}
   <section class="screen fade" id="s-cover" aria-labelledby="coverTitle">
     <p class="eyebrow" id="coverEyebrow"></p>
     <h1 class="display" id="coverTitle"></h1>
+    <p class="lead lead-strong" id="coverIntro"></p>
     <p class="lead" id="coverPromise"></p>
     <ul class="learn" id="coverLearn"></ul>
     <div class="cta-row">
@@ -315,91 +362,70 @@ h1.display{font-size:clamp(40px, 12vw, 70px); line-height:.98}
   <section class="screen" id="s-result" hidden>
     <p class="print-only label" id="printDate"></p>
 
-    <p class="eyebrow">Tu resultado</p>
-    <h2 class="r-stage" id="rStage"></h2>
-    <div aria-hidden="true">
-      <div class="track" id="rTrack"></div>
-      <div class="track-labels"><span>Etapa <span id="rStageN"></span> de 4</span><span id="rScore"></span></div>
-    </div>
-    <p class="stage-text" id="rStageText"></p>
-
-    <div class="block" id="rHearBlock">
-      <p class="label">Antes que nada</p>
-      <p class="hear" id="rHear"></p>
-    </div>
-
+    <!-- [A] Punto de partida -->
+    <h2 class="r-head" id="rHead"></h2>
+    <p class="r-stage-line"><span id="rStageLine"></span> <span class="r-score" id="rScore"></span></p>
+    <div class="track" id="rTrack" aria-hidden="true"></div>
     <div class="block">
-      <p class="label">Lo que más te está frenando es</p>
+      <p class="label" id="rPrioLabel"></p>
       <h3 class="route" id="rRoute"></h3>
-      <p class="bottleneck" id="rTitle"></p>
+      <p class="prose" id="rPrio"></p>
     </div>
 
+    <!-- [B] Primera acción -->
     <div class="block">
-      <p class="label">Qué está pasando</p>
-      <p class="prose" id="rMeaning"></p>
+      <p class="label" id="rFirstLabel"></p>
+      <div class="first" id="rFirst"></div>
+      <details class="more" id="rMore">
+        <summary id="rMoreSummary"></summary>
+        <div class="more-body">
+          <div class="block">
+            <p class="label">Tus otras dos acciones</p>
+            <ol class="moves" id="rMoves" start="2"></ol>
+            <p class="note" id="rMovesNote" style="margin-top:24px"></p>
+          </div>
+          <div class="block">
+            <p class="label">Tu mapa SABOR</p>
+            <ul class="profile" id="rProfile"></ul>
+          </div>
+          <div class="secondary no-print">
+            <button class="btn btn-ghost" id="saveBtn" type="button">Guardar mi resultado</button>
+          </div>
+        </div>
+      </details>
     </div>
 
-    <div class="block">
-      <p class="label">Lo que te está costando</p>
-      <p class="prose" id="rCost"></p>
+    <!-- [C] Experiencia real (solo si hay material autorizado) + Juan Andrés -->
+    <div class="block" id="testiBlock" hidden>
+      <p class="label" id="testiTitle"></p>
+      <figure class="testi">
+        <div class="testi-frame"><video id="testiVideo" controls playsinline preload="none"></video></div>
+        <figcaption>
+          <p class="testi-quote" id="testiQuote"></p>
+          <p class="testi-frase" id="testiFrase"></p>
+          <p class="testi-name" id="testiName"></p>
+          <p class="testi-detail" id="testiDetail"></p>
+        </figcaption>
+      </figure>
     </div>
-
-    <div class="block">
-      <p class="label">Lo que probablemente piensas</p>
-      <div class="myth">
-        <p class="belief" id="rBelief" style="margin:0"></p>
-        <p class="truth" id="rTruth"></p>
+    <div class="block juan">
+      <img class="juan-photo" id="juanPhoto" src="data:image/jpeg;base64,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" alt="Foto de Juan Andrés" width="72" height="72">
+      <div>
+        <h3 class="juan-name" id="juanName"></h3>
+        <p class="prose" id="juanText"></p>
       </div>
     </div>
 
-    <div class="block">
-      <p class="label">Tus 3 primeros movimientos</p>
-      <p class="prose moves-intro" id="rMovesIntro"></p>
-      <ol class="moves" id="rMoves"></ol>
-      <p class="note" id="rMovesNote" style="margin-top:24px"></p>
-    </div>
-
-    <div class="block">
-      <p class="label" id="timeLabel"></p>
-      <p class="prose" id="timeText"></p>
-    </div>
-
-    <div class="block">
-      <p class="label" id="pathLabel"></p>
-      <div class="ab">
-        <div><b>Hoy</b><span id="rPointA"></span></div>
-        <div><b>La meta</b><span id="rPointB"></span></div>
-      </div>
-      <p class="prose gap" id="rGap"></p>
-      <ol class="path" id="rPath"></ol>
-      <p class="note" id="rPathNote"></p>
-    </div>
-
-    <div class="block">
-      <p class="label">Lo que noté en tus respuestas</p>
-      <ul class="profile" id="rProfile"></ul>
-    </div>
-
+    <!-- [D] CTA único -->
     <aside class="next no-print" aria-labelledby="nextTitle">
-      <p class="label">Tu siguiente paso</p>
+      <span class="next-line" aria-hidden="true"></span>
       <h3 id="nextTitle"></h3>
-      <p id="nextText"></p>
-      <p id="nextInvite"></p>
-      <p class="doubts-t" id="doubtsTitle"></p>
-      <ul class="doubts" id="doubts"></ul>
-      <p id="nextCalm"></p>
-      <p class="cap" id="capMain"></p>
-      <a class="btn btn-accent btn-block" id="ctaMain" href="#" target="_blank" rel="noopener"></a>
-      <p class="cap" id="capAlt"></p>
-      <a class="btn btn-line btn-block" id="ctaAlt" href="#" target="_blank" rel="noopener"></a>
+      <div id="nextBody"></div>
+      <a class="btn btn-cta btn-block" id="ctaMain" href="#" target="_blank" rel="noopener"></a>
       <small id="ctaNote"></small>
-      <div class="method" id="methodLine"></div>
     </aside>
 
-    <div class="secondary no-print">
-      <button class="btn btn-ghost" id="saveBtn" type="button">Guardar mi resultado</button>
-      <button class="btn btn-ghost" id="restartBtn" type="button">Repetir el diagnóstico</button>
-    </div>
+    <p class="repeat no-print"><button type="button" class="link-btn" id="restartBtn">Repetir el diagnóstico</button></p>
 
     <div class="print-only block">
       <p class="label">Siguiente paso</p>
@@ -422,56 +448,77 @@ const CONFIG = {
   portada: {
     eyebrow: "Diagnóstico",
     titulo: "¿Por qué te quedas <em>sentado</em> cuando suena la salsa?",
-    promesa: "5 preguntas sencillas. No necesitas saber bailar para responderlas. Al final sabrás qué te frena de verdad y cuál es tu primer paso.",
+    intro: "Si el trabajo te deja poco tiempo y quieres aprender salsa desde cero, esto es para ti.",
+    promesa: "",   // texto opcional bajo la frase anterior (vacío = no se muestra)
+    // Lista bajo la frase de entrada (si la vacías con [], no se muestra).
     aprenderas: [
       "Qué te frena de verdad cuando suena la salsa y estás en esa boda, en esa fiesta o frente a esa persona que te encanta.",
       "Por qué tu mente se queda en blanco justo cuando estás en la pista, y por qué no tiene nada que ver con el talento.",
       "Cómo aprender aunque el trabajo te deje poco tiempo."
     ],
-    boton: "Empezar el diagnóstico",
-    meta: "5 preguntas · 2 minutos · Pensado para quien nunca ha bailado"
+    boton: "DESCUBRIR MI PRIMER PASO",
+    meta: "5 preguntas + tu motivación · Aproximadamente 2 minutos · Sin registro"
   },
 
-  /* ---------- AGENDA ----------
-     calendario: pega aquí el enlace de tu calendario de reservas
-                 (por ejemplo https://calendly.com/tu-usuario/evaluacion).
-                 Si es de Calendly, el resultado se escribe solo en la primera
-                 pregunta personalizada de tu evento.
-                 Si lo dejas vacío (""), el botón principal abre WhatsApp. */
-  calendario: "",
-  whatsapp: "593958980753",          // código de país, sin + ni espacios
+  // Número de WhatsApp que recibe los mensajes (código de país, sin + ni espacios).
+  whatsapp: "593958980753",
 
+  // Textos de la pantalla de resultado.
+  resultado: {
+    titulo: "YA TIENES UN PUNTO DE PARTIDA.",
+    etapaPrefijo: "Etapa orientativa:",
+    prioridadEtiqueta: "POR DÓNDE TE RECOMIENDO COMENZAR",
+    primeraAccion: "TU PRIMERA ACCIÓN",
+    observar: "QUÉ PUEDES OBSERVAR",
+    verMas: "VER MIS OTRAS RECOMENDACIONES"
+  },
+
+  /* Testimonio en video. Solo se muestra si hay un video real Y autorización
+     de la persona (autorizado: true). Mientras tanto no aparece nada.
+     video: ruta del archivo (ej. "testimonio.mp4"), miniatura: imagen de portada,
+     subtitulos: archivo .vtt. nombre, detalle (ej. "38 años · Quito") y cita: solo lo que la persona autorizó.
+     Formato recomendado del video: vertical 4:5 o 9:16, 25 a 35 segundos. */
+  testimonio: {
+    autorizado: false,   // se activa cuando testimonio.mp4 esté subido
+    titulo: "ASÍ HA SIDO APRENDER CON JUAN.",
+    video: "testimonio.mp4",
+    miniatura: "testimonio-portada.jpg",
+    subtitulos: "",
+    nombre: "Esteban",   // solo si lo autoriza
+    detalle: "",
+    cita: "",        // frase textual que dice la persona (opcional)
+    // Frase de cierre bajo el video. Si cambias el nombre, cámbialo también aquí.
+    frase: "Para Esteban, todo empezó con un primer paso. Lo demás lo construimos juntos."
+  },
+
+  // Presentación (texto aprobado, no modificar).
+  juan: {
+    titulo: "SOY JUAN ANDRÉS.",
+    texto: "Acompaño a hombres con poco tiempo a pasar de no saber desenvolverse bailando salsa a desarrollar, en 90 días, las bases y la confianza necesarias para bailar una canción completa con alguien y llevar progresivamente esa habilidad a situaciones reales."
+  },
+
+  // Único llamado a la acción (texto aprobado).
   cta: {
-    titulo: "Ya sabes qué te frena. Falta el cómo, en tu caso.",   // se reemplaza por el del motivo elegido
-    // {freno} se reemplaza por el freno principal de la persona.
-    intro: "Ya hiciste lo más difícil: mirar con honestidad qué te pasa. Ahora sabes que lo que más te frena es que {freno}. Y quiero que sepas algo: tiene solución, y no tienes que resolverlo solo.",
-    invitacion: "Me encantaría escucharte. Agenda tu Evaluación De Cero a Salsero: una llamada de 15 minutos por WhatsApp, entre tú y yo.",
-    dudasTitulo: "En esos 15 minutos vamos a:",
-    dudaInicial: "Escuchar tu caso: qué te pasa cuando suena la salsa y qué quieres lograr.",
-    dudas: [
-      "Decirte con total sinceridad si el acompañamiento de 3 meses es para ti. Y si no lo es, te lo voy a decir."
+    tituloNeutro: "QUE LA PRÓXIMA CANCIÓN TE ENCUENTRE MÁS PREPARADO.",   // si no hay motivo
+    parrafos: [
+      "Ya tienes una idea de por dónde comenzar. Pero cuando el trabajo ocupa gran parte de tu semana y no sabes cómo organizarte para aprender, es fácil seguir dejándolo para después. Y cuando llega otra reunión o fiesta, esas ganas de bailar y de no quedarte sentado siguen ahí.",
+      "No necesitas esperar a tener una semana libre para empezar a cambiarlo.",
+      "Escríbeme y coordinamos una <b>llamada de orientación de 15 minutos</b>. Revisamos tu resultado, vemos cómo podrías avanzar con el tiempo que tienes y si mi mentoría personalizada de 90 días se adapta a lo que buscas."
     ],
-    tranquilidad: "No es una clase: es una conversación entre tú y yo para entender tu caso. Piénsalo así: cada vez que suena una salsa y te quedas sentado, la idea de «yo no soy de los que bailan» se hace más fuerte. Cuanto antes hablemos, antes empieza ese cambio que tanto quieres.",
-    // Dos caminos: quien ya está seguro agenda; quien tiene dudas escribe.
-    textoAgendar: "¿Listo para dar el paso?",
-    botonCalendario: "Elegir día y hora de mi llamada",
-    botonAgendarWhatsapp: "Agendar mi llamada por WhatsApp",   // se usa si no hay calendario
-    textoDuda: "¿Prefieres preguntarme algo antes? Escríbeme con confianza.",
-    botonDuda: "Escribirme por WhatsApp",
-    nota: "En los dos casos tu resultado ya va incluido, así no tienes que explicarlo desde cero.",
-    metodo: "Acompañamiento 1 a 1 · Virtual · 3 meses<br>Siente · Automatiza · Baila · Orienta · Responde",
-    pdf: "Agenda tu Evaluación De Cero a Salsero por WhatsApp: +593 95 898 0753"
+    boton: "ESCRÍBEME POR WHATSAPP",
+    nota: "Hablas directamente conmigo. Si encajamos, te explicaré cómo funciona la mentoría y su inversión. Sin compromiso de contratar.",
+    pdf: "Escríbeme por WhatsApp para coordinar una llamada de orientación de 15 minutos: +593 95 898 0753"
   },
 
-  // Resumen que te llega por WhatsApp (y al calendario). r = resultado completo.
+  // Mensaje que se abre en WhatsApp (la persona puede editarlo antes de enviar).
   mensaje: (r) =>
-    `Hola, hice el diagnóstico "¿Por qué te quedas sentado cuando suena la salsa?".\n\n` +
-    `Etapa: ${r.etapa} (${r.puntos}/${r.maximo})\n` +
-    `Mi ruta: ${r.ruta} – ${r.titulo}\n\n` +
+    `Hola, Juan Andrés. Acabo de completar Tu Primer Paso Salsero.\n\n` +
+    `Mi etapa: ${r.etapa}\n` +
+    `Mi ruta: ${r.ruta}\n` +
+    `Lo que quiero conseguir: ${r.motivo}\n\n` +
     `Mis respuestas:\n` +
-    r.respuestas.map((a, i) => `${i + 1}. ${a.tema}: ${a.respuesta}`).join("\n") +
-    (r.motivo ? `\n\nLo que más me mueve: ${r.motivo}` : "") +
-    `\n\n${r.duda ? "Tengo una duda antes de agendar: " : "Quiero agendar mi Evaluación De Cero a Salsero."}`,
+    r.respuestas.map((a, i) => `${i + 1}. ${a.tema}: ${a.respuesta}`).join("\n") + `\n\n` +
+    `Me gustaría revisar mi resultado contigo y coordinar una llamada de orientación de 15 minutos para saber cómo avanzar.`,
 
   // Textos de la pantalla de carga (se muestran uno tras otro).
   carga: ["Leyendo tus respuestas", "Encontrando qué te frena", "Trazando tu ruta"],
@@ -479,41 +526,37 @@ const CONFIG = {
   /* Pregunta final SIN puntaje: no cambia la ruta, pero personaliza el
      resultado con el motivo real de la persona. */
   motivo: {
-    eyebrow: "Una última cosa",
+    eyebrow: "Paso extra · Tu motivación",
     texto: "Si fueras totalmente honesto, ¿qué es lo que más te mueve a aprender?",
     ayuda: "Esto no cambia tu resultado, pero me ayuda a hablarte de lo que de verdad te importa.",
     opciones: [
       { texto: "Hay una boda, un viaje o un evento y no quiero volver a quedarme sentado.",
         corto: "Un evento que se viene",
-        teEntiendo: "Sé lo que se siente: todos se levantan, alguien te dice «¡vamos!» y tú sonríes, pones una excusa y te quedas mirando. Después llega la foto donde todos bailan menos tú. No es que no quieras bailar. Es que nadie te mostró por dónde empezar.",
+        empatia: "Si tienes una boda o una fiesta en mente, es lógico que quieras llegar con más confianza. No necesitas aprender todo de golpe: necesitas saber por dónde comenzar.",
         meta: "En tu próximo evento eres tú quien se levanta, invita a alguien y disfruta la canción completa.",
-        cta: "Que el próximo evento sea distinto.",
-        puente: "Si tienes una fecha cerca, cuéntamela en la llamada: vemos qué es realista para ese día y qué construimos con calma después." },
+        cta: "QUE TU PRÓXIMO EVENTO TE ENCUENTRE MÁS PREPARADO." },
       { texto: "Quiero bailar con alguien que me gusta.",
         corto: "Bailar con alguien que me gusta",
-        teEntiendo: "Seguramente te ha pasado: suena la salsa, esa persona está ahí y tú sabes que es el momento perfecto para acercarte. Pero te frena una pregunta: «¿y si hago el ridículo justo frente a ella?». Así que dejas pasar la canción, y con ella la oportunidad.",
+        empatia: "Cuando quieres bailar con alguien especial, no solo te preocupan los pasos. También quieres sentirte cómodo al invitar y compartir una canción.",
         meta: "Cuando suene la salsa, eres tú quien la invita, y la conexión empieza en la pista.",
-        cta: "Que la próxima vez seas tú quien la invite.",
-        puente: "Y sí, también hablamos de cómo llegar a ese momento con ella sintiéndote seguro, sin forzar nada." },
+        cta: "QUE LA PRÓXIMA INVITACIÓN NO SE QUEDE SOLO EN TU CABEZA." },
       { texto: "El trabajo me absorbe y quiero recuperar mi vida social.",
         corto: "Recuperar mi vida social",
-        teEntiendo: "Pasa sin darte cuenta: el trabajo se come la semana, los planes se vuelven cada vez menos y, cuando por fin llega una reunión con amigos, te quedas a un lado mientras los demás bailan. No es falta de ganas. Es que nadie te dio un camino que quepa en una agenda llena.",
+        empatia: "Cuando el trabajo ocupa buena parte de tu semana, cuesta encontrar tiempo para hacer algo diferente. La salsa puede ser un espacio para salir de la rutina y conocer personas.",
         meta: "Vuelves a salir, a conocer gente y a disfrutar las reuniones en lugar de mirarlas desde la mesa.",
-        cta: "Que el baile te saque de la burbuja del trabajo.",
-        puente: "Y todo lo que te proponga va a estar pensado para tu agenda real, no para la de alguien con las tardes libres." },
+        cta: "QUE TU SEMANA TENGA ALGO MÁS QUE TRABAJO Y CASA." },
       { texto: "Estoy cansado de ser el que siempre se queda sentado.",
         corto: "Dejar de ser el que se queda sentado",
-        teEntiendo: "Ya lo conoces de memoria: suena la salsa y empieza el ritual. Vas a la barra, sacas el celular, te metes en una conversación. Por fuera parece que no te importa. Por dentro sabes que te encantaría estar ahí, y cada vez pesa un poco más.",
+        empatia: "A veces te quedas en la mesa aunque tengas ganas de bailar. No siempre faltan ganas: a veces falta saber cómo comenzar.",
         meta: "Dejas de esquivar la pista: te levantas, invitas y lo disfrutas sin pensarlo dos veces.",
-        cta: "Que dejes de ser el que mira desde la mesa.",
-        puente: "Lo que más quiero es que la próxima vez que suene una salsa no tengas que inventar ninguna excusa." }
+        cta: "QUE LA PRÓXIMA OPORTUNIDAD DE BAILAR NO TE ENCUENTRE CON LAS MISMAS DUDAS." }
     ]
   },
 
   // Objeción de tiempo (se muestra a todos).
   tiempo: {
-    titulo: "¿Y si casi no tengo tiempo?",
-    texto: "Es la duda más común, y tiene sentido. Por eso este proceso no se basa en horas de academia, sino en prácticas breves pero frecuentes, guiadas 1 a 1 y de forma virtual. Lo que hace la diferencia no es cuántas horas practicas, sino que cada minuto esté bien dirigido hacia lo que a ti te frena."
+    titulo: "¿Tienes poco tiempo?",
+    texto: "Lo importante no es practicar durante horas, sino saber qué conviene trabajar y hacerlo con constancia. La frecuencia y las actividades se adaptan a tu disponibilidad real."
   },
 
   // Aparece debajo de los 3 movimientos.
@@ -528,15 +571,18 @@ const CONFIG = {
       { cuando: "Mes 2", nombre: "Bailar una canción completa", texto: "Unir pocos movimientos y aprender a llevar a tu pareja.", areas: ["B", "O"] },
       { cuando: "Mes 3", nombre: "Llevarlo a la pista real", texto: "Practicar en situaciones reales hasta que se vuelva natural.", areas: ["R"] }
     ],
+    ritmo: "Esta es la progresión que buscamos trabajar; la velocidad de avance depende de tu punto de partida y de tu práctica.",
     nota: "No es un curso exprés. Lo que se aprende con prisa se olvida en la siguiente fiesta; lo que se practica con calma se queda contigo. Por eso el proceso dura 3 meses. Y lo que ganas no se queda en la salsa: la seguridad de levantarte, invitar y llevar a alguien se nota también en cómo te presentas, conversas y conectas."
   },
 
   // Rutas. Una por área del Método SABOR, de lo más básico a lo más avanzado.
-  // "enLaLlamada" debe completar la frase «En esa llamada vamos a:».
   rutas: {
     S: {
       area: "Siente", etiqueta: "Escuchar la música",
       ruta: "Ruta Oído",
+      corto: "reconocer en qué momento moverte con la música",
+      enMensaje: "Reconocer en qué momento moverme con la música",
+      prioridad: "Por tus respuestas, una buena prioridad sería aprender a reconocer en qué momento moverte. Cuando tu oído encuentra el ritmo, todo lo demás se vuelve más fácil.",
       titulo: "Todavía no sabes en qué momento moverte",
       significado: "La salsa tiene muchos instrumentos sonando a la vez, y tu oído todavía no sabe cuál seguir. Por eso, cuando intentas moverte, no sabes cuándo dar el paso, todo se siente forzado y lo más lógico es quedarte quieto.",
       costo: "Mientras no encuentres el ritmo, todo lo que intentes aprender después se va a sentir torpe. Es como construir una casa sin cimientos: puedes poner paredes, pero se caen en cuanto hay presión, como en una fiesta llena de gente.",
@@ -560,12 +606,14 @@ const CONFIG = {
           { t: "Practica siempre con las mismas canciones", c: "Elige 2 salsas que suelan sonar en tus eventos, como «Vivir mi vida» y «La rebelión», y practica solo con ellas hasta que las conozcas de memoria.", p: "Te pierdes cuando la canción te sorprende. Si ya sabes cuándo sube o cambia, te adelantas al cambio.", s: "sabes cuándo viene el cambio antes de que pase." },
           { t: "Escucha antes de moverte", c: "Escucha la canción una vez sin moverte y nota en qué momento se acelera o entran más instrumentos.", p: "Lo que sabes que viene no te toma por sorpresa.", s: "sabes cuándo viene el cambio antes de que pase." }
         ]
-      },
-      enLaLlamada: "Darte un primer ajuste para que encuentres el ritmo, pensado para ti."
+      }
     },
     A: {
       area: "Automatiza", etiqueta: "Que el paso salga solo",
       ruta: "Ruta Base",
+      corto: "lograr que tu paso salga sin pensarlo",
+      enMensaje: "Lograr que mi paso salga sin pensarlo",
+      prioridad: "Por tus respuestas, una buena prioridad sería lograr que tu paso salga sin pensarlo, para que no se te borre cuando hay ruido, gente o nervios.",
       titulo: "Tu paso todavía depende de tu cabeza",
       significado: "Sabes algo, o casi, pero para hacerlo tienes que pensar en cada movimiento. En una fiesta, con ruido, una pareja y algo de nervios, la cabeza se llena y el paso desaparece.",
       costo: "Practicas un poco, pero sientes que no avanzas, y cada evento es volver a empezar de cero. Ese desgaste es justo lo que hace que la mayoría abandone, muchas veces cuando le faltaba poco.",
@@ -589,12 +637,14 @@ const CONFIG = {
           { t: "Que alguien te mire sin decir nada", c: "Pide a alguien de confianza que te mire durante una canción completa en silencio, y que al final te diga una sola cosa que se vio bien.", p: "Acostumbras a tu cuerpo a sentirse observado en un lugar seguro, y te llevas algo bueno en lugar de una crítica.", s: "te miran y no se te olvida nada." },
           { t: "Practica cambiando de lugar", c: "Cada cierto tiempo, gira y sigue mirando hacia otra pared.", p: "En la pista te mueves y cambias de lugar. Si solo practicas mirando a un lado, te desorientas.", s: "giras y sigues como si nada." }
         ]
-      },
-      enLaLlamada: "Darte un primer ajuste para que lo que practiques no se te borre en la fiesta."
+      }
     },
     B: {
       area: "Baila", etiqueta: "Sostener una canción",
       ruta: "Ruta Repertorio",
+      corto: "sostener una canción completa sin quedarte en blanco",
+      enMensaje: "Sostener una canción completa sin quedarme en blanco",
+      prioridad: "Por tus respuestas, una buena prioridad sería tener un plan sencillo para sostener una canción completa sin quedarte en blanco.",
       titulo: "Te quedas sin ideas a mitad de la canción",
       significado: "Puedes empezar, pero no tienes una secuencia clara para llenar una canción completa, que dura más o menos 3 minutos. Al poco tiempo te quedas en blanco o repites lo mismo, sientes que se nota y la incomodidad crece.",
       costo: "Esa sensación de «se nota que no sé» es la que hace que, la próxima vez, prefieras quedarte sentado. Y cada vez que pasa, la idea de que bailar no es lo tuyo se hace un poco más fuerte.",
@@ -618,12 +668,14 @@ const CONFIG = {
           { t: "Vuelve a lo simple entre cada cambio", c: "Busca en YouTube «salsa en boda» y fíjate en qué hace un hombre después de cada vuelta o movimiento nuevo: casi siempre regresa unos segundos a lo más simple. Haz tú lo mismo.", p: "Regresar a lo simple entre un cambio y otro es lo que hace que la variedad se vea natural y no forzada.", s: "tus cambios se ven fluidos, sin cortes." },
           { t: "Mírate en video", c: "Grábate una canción completa y mírala. Anota en qué momento empiezas a repetir.", p: "Te muestra exactamente dónde necesitas variedad, sin adivinar.", s: "sabes en qué parte de la canción te estancas." }
         ]
-      },
-      enLaLlamada: "Darte un primer ajuste para que dejes de quedarte en blanco a mitad de la canción."
+      }
     },
     O: {
       area: "Orienta", etiqueta: "Llevar a tu pareja",
       ruta: "Ruta Pareja",
+      corto: "sentirte cómodo guiando a otra persona",
+      enMensaje: "Sentirme cómodo guiando a otra persona",
+      prioridad: "Por tus respuestas, una buena prioridad sería aprender a guiar con señales simples, para que bailar con otra persona se sienta cómodo para los dos.",
       titulo: "Todavía no sabes cómo llevar a tu pareja",
       significado: "En la salsa en pareja, a ti te toca proponer qué hacer. Si tu señal no es clara, la otra persona tiene que adivinar, el baile se siente torpe para los dos y tu seguridad se cae.",
       costo: "Bailar en pareja es justo lo que quieres disfrutar: con tu pareja, en una boda, en un viaje. Y es donde más incómodo te sientes. Sin saber llevar, los dos terminan adivinando y nadie lo disfruta.",
@@ -647,12 +699,14 @@ const CONFIG = {
           { t: "Guía como si llevaras un vaso de agua", c: "Imagina que tienes un vaso lleno en la mano con la que la guías: muévela sin derramarlo.", p: "Así la señal es suave y clara, sin jalones que la incomoden.", s: "la vuelta se siente suave para los dos." },
           { t: "Pregunta cómo se sintió", c: "Al terminar, pregunta: «¿se entendió cuándo venía la vuelta?».", p: "Su respuesta te dice exactamente qué ajustar.", s: "te dicen que sí, sin dudar." }
         ]
-      },
-      enLaLlamada: "Darte un primer ajuste para que ella se sienta segura bailando contigo."
+      }
     },
     R: {
       area: "Responde", etiqueta: "Seguridad en la pista",
       ruta: "Ruta Pista",
+      corto: "ganar seguridad para levantarte a bailar",
+      enMensaje: "Ganar seguridad para levantarme a bailar",
+      prioridad: "Por tus respuestas, una buena prioridad sería ganar seguridad para levantarte a bailar. Probablemente sabes más de lo que usas.",
       titulo: "El miedo a la pista te frena más que los pasos",
       significado: "Probablemente tienes más bases de las que usas. Lo que te detiene es el momento de levantarte: las miradas, el miedo a equivocarte frente a todos, la sensación de no estar listo.",
       costo: "Bodas, cumpleaños, viajes, fiestas del trabajo. Cada una que pasa desde la silla es un momento que no vuelve. Y si alguna vez invitaste a alguien y te dijo que no, ese recuerdo pesa todavía más: la idea de «yo no soy de los que bailan» se hace cada vez más fuerte.",
@@ -676,14 +730,16 @@ const CONFIG = {
           { t: "Practica con las canciones que siempre suenan", c: "Practica en casa con 2 o 3 salsas que suelen sonar en los eventos, como «Vivir mi vida» o «La rebelión».", p: "Cuando suenen, tu cuerpo las reconoce y se suelta, porque ya sabe qué hacer.", s: "sabes qué hacer durante toda la canción." },
           { t: "Suelta el error rápido", c: "Si algo sale mal, ríete, vuelve a lo más fácil que sabes y sigue.", p: "La gente no recuerda tu error: recuerda que te divertiste.", s: "un error ya no te saca de la pista." }
         ]
-      },
-      enLaLlamada: "Darte un primer ajuste para llegar con más seguridad a tu próximo evento."
+      }
     }
   },
 
   // Si alguien responde todo en el nivel más alto, recibe esta ruta.
   rutaSoltura: {
     area: "Todas", ruta: "Ruta Soltura",
+      corto: "pulir los detalles de tu baile",
+      enMensaje: "Pulir los detalles de mi baile",
+      prioridad: "Por tus respuestas, ya tienes buenas bases. Una buena prioridad sería pulir los detalles que separan bailar de bailar con soltura.",
     titulo: "Tienes las bases: te falta pulir el detalle",
     significado: "Sigues la música, el paso te sale solo, sostienes una canción, llevas a tu pareja y te levantas a bailar. Lo que queda no es aprender desde cero, sino afinar.",
     costo: "Cuando ya bailas, lo fácil es quedarse siempre con lo mismo. Sin un siguiente reto claro, el baile deja de crecer y se vuelve repetitivo.",
@@ -693,8 +749,7 @@ const CONFIG = {
       "Grábate bailando una canción completa y elige un solo detalle para mejorar esta semana: postura, brazos o el cierre de las vueltas.",
       "Baila con tres parejas distintas en tu próximo evento y nota con cuál te costó más. Ahí está tu siguiente ajuste.",
       "Escoge una salsa más rápida de lo normal y mantén el paso a tiempo durante toda la canción."
-    ],
-    enLaLlamada: "Darte un primer ajuste sobre el detalle que más te conviene pulir."
+    ]
   },
 
   // Etapas según el puntaje total (máximo 15). "desde" es el mínimo de cada etapa.
@@ -719,7 +774,7 @@ const CONFIG = {
   preguntas: [
     { area: "R", tema: "En una fiesta",
       texto: "Piensa en la última boda o fiesta a la que fuiste. Empieza una salsa y la pista se llena. ¿Qué hiciste tú?",
-      ayuda: "Aquí no hay respuestas buenas ni malas. Elige la que más se parezca a ti.",
+      ayuda: "Aquí no hay respuestas buenas ni malas. Si hace tiempo que no vas a una fiesta, imagina qué harías.",
       respuestas: [
         "Me quedé en la mesa: conversando, con el celular o yendo por algo a la barra.",
         "Bailé porque alguien me sacó, pero me quedé en blanco y solo quería que terminara.",
@@ -788,14 +843,14 @@ const CONFIG = {
         "No sabría ni cómo tomarle la mano, y me daría miedo pisarla.",
         "Estaría tan pendiente de mis pies que no podría ni mirarla.",
         "Intentaría una vuelta, pero seguramente saldría brusca o no se entendería.",
-        "La llevaría con seguridad y ella me seguiría sin problema."
+        "Me sentiría cómodo guiando movimientos sencillos y prestando atención a la otra persona."
       ],
-      eco: ["Es normal sentir eso. Llevar a alguien se aprende.", "Pasa muchísimo: la atención se va a los pies.", "Ya te animas a proponer, y eso dice mucho.", "Excelente. Ella se sentiría segura contigo."],
+      eco: ["Es normal sentir eso. Llevar a alguien se aprende.", "Pasa muchísimo: la atención se va a los pies.", "Ya te animas a proponer, y eso dice mucho.", "Muy bien. Esa comodidad se nota al bailar."],
       lecturas: [
         "Bailar con alguien todavía te genera dudas. Es normal: llevar a otra persona se aprende con señales simples.",
         "Hoy tu atención se va a los pies. Cuando el paso salga solo, podrás estar presente con la otra persona.",
         "Ya intentas proponer. Falta que tus señales sean más suaves y claras.",
-        "Llevas con seguridad, y la otra persona se siente cómoda contigo."
+        "Te sientes cómodo guiando y prestas atención a la otra persona: una muy buena base."
       ]}
   ]
 };
@@ -816,11 +871,14 @@ const pad = (n) => String(n).padStart(2, "0");
 $("brand").innerHTML = `${CONFIG.marca.nombre} <b>${CONFIG.marca.destacado}</b>`;
 $("coverEyebrow").textContent = CONFIG.portada.eyebrow;
 $("coverTitle").innerHTML = CONFIG.portada.titulo;
+$("coverIntro").textContent = CONFIG.portada.intro;
 $("coverPromise").textContent = CONFIG.portada.promesa;
+$("coverPromise").hidden = !CONFIG.portada.promesa;
 $("coverMeta").textContent = CONFIG.portada.meta;
 $("startBtn").textContent = CONFIG.portada.boton;
 $("coverLearn").innerHTML = CONFIG.portada.aprenderas
   .map((t, i) => `<li><i>${pad(i + 1)}</i><span>${t}</span></li>`).join("");
+$("coverLearn").hidden = !CONFIG.portada.aprenderas.length;
 $("qTotal").textContent = Q.length;
 $("progress").innerHTML = Q.map(() => `<span class="beat"></span>`).join("");
 
@@ -932,111 +990,106 @@ const readings = (k) => Q.map((q, i) => q.area === k && q.lecturas ? q.lecturas[
 function renderResult(){
   result = compute();
   const { ruta, etapa, etapaIdx, total, key, pct } = result;
+  const R = CONFIG.resultado;
 
   $("printDate").textContent = `${CONFIG.marca.nombre} ${CONFIG.marca.destacado} · Diagnóstico · ` +
     new Date().toLocaleDateString("es", { day: "numeric", month: "long", year: "numeric" });
-  $("rStage").textContent = etapa.nombre;
-  $("rStageN").textContent = etapaIdx + 1;
-  $("rScore").textContent = `${total} de ${MAX}`;
-  $("rStageText").textContent = etapa.texto;
+
+  // [A] Punto de partida
+  $("rHead").textContent = R.titulo;
+  $("rStageLine").textContent = `${R.etapaPrefijo} ${etapa.nombre}`;
+  $("rScore").textContent = `· ${total}/${MAX}`;
   $("rTrack").innerHTML = CONFIG.etapas.map((_, i) =>
     `<span class="${i < etapaIdx ? "on" : i === etapaIdx ? "here" : ""}"></span>`).join("");
-
-  const mot = motivo !== null ? M.opciones[motivo] : null;
-  $("rHearBlock").hidden = !mot;
-  $("rHear").textContent = mot ? mot.teEntiendo : "";
-  $("timeLabel").textContent = CONFIG.tiempo.titulo;
-  $("timeText").textContent = CONFIG.tiempo.texto;
-
+  $("rPrioLabel").textContent = R.prioridadEtiqueta;
   $("rRoute").textContent = ruta.ruta;
-  $("rTitle").textContent = ruta.titulo;
-  $("rMeaning").textContent = ruta.significado;
-  $("rCost").textContent = ruta.costo;
-  $("rBelief").textContent = ruta.creencia;
-  $("rTruth").textContent = ruta.verdad;
+  $("rPrio").textContent = ruta.prioridad;
+
+  // [B] Primera acción (según ruta y nivel de respuesta)
   const qKey = key ? Q.findIndex(q => q.area === key) : -1;
   const lvl = qKey >= 0 ? answers[qKey] : 0;
   const moves = Array.isArray(ruta.movimientos) ? ruta.movimientos : (ruta.movimientos[lvl] || ruta.movimientos[0]);
-  $("rMovesIntro").textContent = qKey >= 0 ? `Me dijiste: «${Q[qKey].respuestas[lvl]}» Por eso, empieza exactamente por aquí:` : "";
-  $("rMovesIntro").hidden = qKey < 0;
+  const moveHTML = (m, full) => typeof m === "string" ? `<p class="mc">${m}</p>` :
+    `<p class="mt">${m.t}</p><p class="mc">${m.c}</p>` +
+    (full && m.p ? `<p class="mp"><b>Por qué funciona:</b> ${m.p}</p>` : "") +
+    `<p class="ms"><b>${R.observar}</b>Vas bien cuando ${m.s}</p>`;
+  $("rFirstLabel").textContent = R.primeraAccion;
+  $("rFirst").innerHTML = moveHTML(moves[0], false);
+  $("rMoreSummary").textContent = R.verMas;
+  $("rMore").open = false;
+  $("rMoves").innerHTML = moves.slice(1).map((m, i) =>
+    `<li><span class="num">${pad(i + 2)}</span><div>${moveHTML(m, true)}</div></li>`).join("");
   $("rMovesNote").textContent = CONFIG.notaPasos;
-  $("rMoves").innerHTML = moves.map((m, i) => typeof m === "string"
-    ? `<li><span class="num">${pad(i + 1)}</span><span>${m}</span></li>`
-    : `<li><span class="num">${pad(i + 1)}</span><div><p class="mt">${m.t}</p><p class="mc">${m.c}</p>${m.p ? `<p class="mp"><b>Por qué funciona:</b> ${m.p}</p>` : ""}<p class="ms"><b>Vas bien cuando</b> ${m.s}</p></div></li>`).join("");
-
-  // Camino de A a B
-  const c = CONFIG.camino;
-  const startPhase = key ? c.fases.findIndex(f => f.areas.includes(key)) : c.fases.length - 1;
-  $("pathLabel").textContent = c.titulo;
-  $("rPointA").textContent = etapa.hoy;
-  $("rPointB").textContent = mot ? mot.meta : c.meta;
-  $("rPath").innerHTML = c.fases.map((f, i) => `
-    <li class="${i === startPhase ? "here" : ""}"><span class="pt" aria-hidden="true"></span>
-      <div><div class="ph">${f.cuando}${i === startPhase ? "<em>Empiezas aquí</em>" : ""}</div>
-      <div class="pn">${f.nombre}</div><div class="pd">${f.texto}</div></div></li>`).join("");
-  $("rPathNote").textContent = c.nota;
-  $("rGap").textContent = key
-    ? `Lo que te separa de la meta no son 50 pasos nuevos. Es resolver primero una cosa: ${ruta.titulo.charAt(0).toLowerCase() + ruta.titulo.slice(1)}.`
-    : "Lo que te separa de la meta no es aprender más pasos, sino pulir los detalles.";
-
   $("rProfile").innerHTML = ORDER.map(k => {
     const a = CONFIG.rutas[k];
     return `<li class="${k === key ? "key" : ""}">
       <span class="l">${k}</span>
       <div><div class="n"><span>${a.area} · ${a.etiqueta}</span><span>${k === key ? "Tu prioridad" : ""}</span></div>
-      <div class="bar"><i data-w="${Math.max(6, Math.round(pct(k) * 100))}"></i></div>
-      ${readings(k).map(t => `<p class="read">${t}</p>`).join("")}</div></li>`;
+      <div class="bar"><i data-w="${Math.max(6, Math.round(pct(k) * 100))}"></i></div></div></li>`;
   }).join("");
-  requestAnimationFrame(() => requestAnimationFrame(() =>
-    $("rProfile").querySelectorAll(".bar i").forEach(b => b.style.width = b.dataset.w + "%")));
+  setBars();
 
-  // Siguiente paso
-  $("nextTitle").textContent = mot ? mot.cta : CONFIG.cta.titulo;
-  const freno = ruta.titulo.charAt(0).toLowerCase() + ruta.titulo.slice(1);
-  $("nextText").textContent = key ? CONFIG.cta.intro.replace("{freno}", freno)
-    : "Ya hiciste lo más difícil: mirar con honestidad dónde estás. Tienes bases, y lo que queda es pulir detalles.";
-  $("nextInvite").textContent = CONFIG.cta.invitacion + (mot && mot.puente ? " " + mot.puente : "");
-  $("doubtsTitle").textContent = CONFIG.cta.dudasTitulo;
-  $("doubts").innerHTML = [CONFIG.cta.dudaInicial, ruta.enLaLlamada, ...CONFIG.cta.dudas].map(d => `<li>${d}</li>`).join("");
-  $("nextCalm").textContent = CONFIG.cta.tranquilidad;
+  // [C] Testimonio (solo con material real y autorizado) + presentación
+  renderTestimonio();
+  $("juanName").textContent = CONFIG.juan.titulo;
+  $("juanText").textContent = CONFIG.juan.texto;
+
+  // [D] CTA único
+  const mot = motivo !== null ? M.opciones[motivo] : null;
+  $("nextTitle").textContent = mot ? mot.cta : CONFIG.cta.tituloNeutro;
+  $("nextBody").innerHTML = CONFIG.cta.parrafos.map(p => `<p>${p}</p>`).join("");
   $("ctaNote").textContent = CONFIG.cta.nota;
-  $("methodLine").innerHTML = CONFIG.cta.metodo;
-  $("printNext").textContent = `En la llamada vamos a ${ruta.enLaLlamada.charAt(0).toLowerCase() + ruta.enLaLlamada.slice(1)} ${CONFIG.cta.pdf}`;
+  $("printNext").textContent = CONFIG.cta.pdf;
   updateCta();
   show("s-result");
 }
 
-function updateCta(){
-  const { ruta, etapa, total } = result;
-  const data = {
-    etapa: etapa.nombre, puntos: total, maximo: MAX,
-    ruta: ruta.ruta, titulo: ruta.titulo,
-    respuestas: Q.map((q, i) => ({ tema: q.tema, respuesta: q.respuestas[answers[i]] })),
-    motivo: motivo !== null ? M.opciones[motivo].corto : null
-  };
-  const msg = CONFIG.mensaje(data);
-  const waLink = (t) => `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(t)}`;
-  const main = $("ctaMain"), alt = $("ctaAlt");
-  $("capMain").textContent = CONFIG.cta.textoAgendar;
-  $("capAlt").textContent = CONFIG.cta.textoDuda;
-  alt.href = waLink(CONFIG.mensaje({ ...data, duda: true }));
-  alt.textContent = CONFIG.cta.botonDuda;
-  if (CONFIG.calendario){
-    let url = CONFIG.calendario;
-    try {
-      const u = new URL(CONFIG.calendario);
-      if (u.hostname.endsWith("calendly.com")) u.searchParams.set("a1", msg);   // 1.ª pregunta del evento
-      url = u.toString();
-    } catch (e) {}
-    main.href = url; main.textContent = CONFIG.cta.botonCalendario;
-  } else {
-    main.href = waLink(msg); main.textContent = CONFIG.cta.botonAgendarWhatsapp;
-  }
+function renderTestimonio(){
+  const T = CONFIG.testimonio, ok = T.autorizado && T.video;
+  $("testiBlock").hidden = !ok;
+  const v = $("testiVideo");
+  if (!ok){ v.removeAttribute("src"); v.innerHTML = ""; return; }
+  $("testiTitle").textContent = T.titulo;
+  v.src = T.video;
+  if (T.miniatura) v.poster = T.miniatura;
+  v.innerHTML = T.subtitulos ? `<track kind="captions" srclang="es" label="Español" src="${T.subtitulos}" default>` : "";
+  $("testiQuote").textContent = T.cita ? `«${T.cita}»` : ""; $("testiQuote").hidden = !T.cita;
+  $("testiFrase").textContent = T.frase || ""; $("testiFrase").hidden = !T.frase;
+  $("testiName").textContent = T.nombre || ""; $("testiName").hidden = !T.nombre;
+  $("testiDetail").textContent = T.detalle || ""; $("testiDetail").hidden = !T.detalle;
 }
 
+// Barras del mapa SABOR (se animan cuando están visibles)
+function setBars(){
+  requestAnimationFrame(() => requestAnimationFrame(() =>
+    $("rProfile").querySelectorAll(".bar i").forEach(b => b.style.width = b.dataset.w + "%")));
+}
+$("rMore").addEventListener("toggle", () => { if ($("rMore").open) setBars(); });
+
+function updateCta(){
+  const { ruta, etapa } = result;
+  const msg = CONFIG.mensaje({
+    etapa: etapa.nombre,
+    ruta: ruta.ruta,
+    motivo: motivo !== null ? M.opciones[motivo].corto : "Aprender a bailar salsa",
+    respuestas: Q.map((q, i) => ({ tema: q.tema, respuesta: q.respuestas[answers[i]] }))
+  });
+  const main = $("ctaMain");
+  main.href = `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(msg)}`;
+  main.textContent = CONFIG.cta.boton;
+}
+
+// Guardar: el PDF incluye las recomendaciones aunque el desplegable esté cerrado
+let moreWasOpen = false;
+window.addEventListener("beforeprint", () => { moreWasOpen = $("rMore").open; $("rMore").open = true; });
+window.addEventListener("afterprint", () => { $("rMore").open = moreWasOpen; });
 $("saveBtn").addEventListener("click", () => window.print());
 $("restartBtn").addEventListener("click", () => {
-  answers = new Array(Q.length).fill(null); current = 0; motivo = null; show("s-cover");
+  clearTimeout(advanceTimer);
+  answers = new Array(Q.length).fill(null); current = 0; motivo = null; result = null;
+  $("rMore").open = false;
+  ["rFirst", "rMoves", "rProfile"].forEach(id => $(id).innerHTML = "");
+  show("s-cover");
 });
 
 /* Teclado: 1–4 elige respuesta, flechas navegan */
